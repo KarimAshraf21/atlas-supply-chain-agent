@@ -49,6 +49,7 @@ export default function GraphPanel() {
   const [size, setSize] = useState({ w: 800, h: 600 });
   const [data, setData] = useState<{ nodes: GNode[]; links: GLink[] }>({ nodes: [], links: [] });
   const [hover, setHover] = useState<string | null>(null);
+  const fitted = useRef(false);
 
   const seeds = useMemo(() => {
     const ids = highlight
@@ -82,7 +83,7 @@ export default function GraphPanel() {
         });
         fg.current?.d3Force("charge")?.strength(-160);
         fg.current?.d3Force("link")?.distance(46);
-        setTimeout(() => fg.current?.zoomToFit(600, 50), 900);
+        fitted.current = false;
       })
       .catch(() => {});
     return () => {
@@ -115,6 +116,12 @@ export default function GraphPanel() {
         graphData={data}
         backgroundColor="rgba(0,0,0,0)"
         cooldownTicks={120}
+        onEngineStop={() => {
+          if (!fitted.current) {
+            fitted.current = true;
+            fg.current?.zoomToFit(500, 70);
+          }
+        }}
         linkColor={(l) => {
           const s = typeof l.source === "string" ? l.source : l.source.id;
           const t = typeof l.target === "string" ? l.target : l.target.id;

@@ -9,6 +9,17 @@ contracts, then answers with numbers, a reasoning path you can see, and the sour
 > a knowledge graph, an explainable reasoning layer, a multi-agent harness exposed over **A2A** with tools over
 > **MCP**, real-time voice, and a polished web app.
 
+![Atlas — Red Sea closure impact on the world map](docs/screenshots/red-sea-impact.png)
+
+## Screenshots
+
+| | |
+|---|---|
+| ![World map](docs/screenshots/overview.png) | ![Scenario lab](docs/screenshots/scenario-lab.png) |
+| **World map** — real sea lanes routed through chokepoints; suppliers by tier | **Scenario lab** — stock-out timeline, products hit and recommended actions, computed by the reasoning engine |
+| ![Risk radar](docs/screenshots/risk-radar.png) | ![Knowledge graph](docs/screenshots/knowledge-graph.png) |
+| **Risk radar** — events in English and Arabic, hidden dependencies, single points of failure | **Knowledge graph** — a distressed tier-2 copper-foil maker behind both battery-cell suppliers |
+
 ## Status
 
 | Layer | State |
