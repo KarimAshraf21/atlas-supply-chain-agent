@@ -92,6 +92,7 @@ CHOKEPOINTS: dict[str, tuple[str, str, float, float, float]] = {
 SEA_ZONES: dict[str, tuple[float, float]] = {
     "EAST_CHINA": (30.0, 124.0),
     "SOUTH_CHINA": (15.0, 114.0),
+    "PHILIPPINE_SEA": (21.0, 127.0),
     "MALACCA_ZONE": (2.0, 102.5),
     "INDIAN_OCEAN": (7.0, 75.0),
     "ARABIAN_SEA": (16.0, 62.0),
@@ -116,7 +117,8 @@ SEA_ZONES: dict[str, tuple[float, float]] = {
 SEA_EDGES: list[tuple[str, str]] = [
     ("EAST_CHINA", "TAIWAN_STRAIT"),
     ("TAIWAN_STRAIT", "SOUTH_CHINA"),
-    ("EAST_CHINA", "SOUTH_CHINA"),  # east of Taiwan (longer, avoids the strait)
+    ("EAST_CHINA", "PHILIPPINE_SEA"),  # east of Taiwan (longer, avoids the strait)
+    ("PHILIPPINE_SEA", "SOUTH_CHINA"),
     ("SOUTH_CHINA", "MALACCA"),
     ("MALACCA_ZONE", "MALACCA"),
     ("MALACCA", "INDIAN_OCEAN"),

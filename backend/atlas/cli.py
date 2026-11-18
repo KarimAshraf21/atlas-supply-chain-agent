@@ -44,6 +44,65 @@ def load(wipe: bool = typer.Option(True, help="Delete existing graph first.")) -
 
 
 @app.command()
+def reason() -> None:
+    """Materialise inferred relationships (rules) in Neo4j."""
+    from .reasoning.rules import materialise
+
+    for rule, n in materialise().items():
+        console.print(f"[green]✓[/] {rule:<18} {n:>5} inferred")
+
+
+@app.command()
+def impact(events: list[str] = typer.Argument(..., help="Risk event ids, e.g. RE-REDSEA")) -> None:
+    """Assess the impact of one or more risk events."""
+    from .reasoning import assess_events, get_snapshot
+
+    r = assess_events(get_snapshot(), events)
+    for k, v in r.totals.items():
+        console.print(f"{k:<28} {v:,.2f}" if isinstance(v, float) else f"{k:<28} {v}")
+    for sf in r.shortfalls[:8]:
+        console.print(f"  stock-out day {sf.stockout_day:>3}: {sf.component_name} @ {sf.factory}")
+
+
+@app.command()
+def serve(host: str = "127.0.0.1", port: int = 8000, reload: bool = False) -> None:
+    """Run the API gateway (chat, graph, scenarios, A2A at /a2a, MCP at /mcp)."""
+    import uvicorn
+
+    uvicorn.run("atlas.api.app:app", host=host, port=port, reload=reload)
+
+
+@app.command()
+def mcp() -> None:
+    """Run the MCP server over stdio (for Claude Desktop, Claude Code and other MCP clients)."""
+    from .tools.mcp_server import build_server
+
+    build_server().run("stdio")
+
+
+@app.command()
+def ask(question: str, thread: str = "cli") -> None:
+    """Ask the agent a question from the terminal (streams tool calls, then the answer)."""
+    import asyncio
+
+    from .agent import stream_turn
+
+    async def go() -> None:
+        async for ev in stream_turn(question, thread):
+            kind = ev.get("type")
+            if kind == "route":
+                console.print(f"[dim]→ {ev['language']} · {', '.join(ev['specialists']) or 'direct'}[/]")
+            elif kind == "tool_start":
+                console.print(f"[cyan]  ⚙ {ev['specialist']}: {ev['tool']}[/] [dim]{ev['args']}[/]")
+            elif kind == "spoken":
+                console.print(f"\n[magenta]🔊 {ev['text']}[/]\n")
+            elif kind == "answer":
+                console.print(ev["answer"])
+
+    asyncio.run(go())
+
+
+@app.command()
 def ontology(out: Path = typer.Option(ROOT / "ontology", help="Export directory.")) -> None:
     """Export the ontology as OWL/Turtle, JSON and an LLM prompt."""
     from .ontology import ONTOLOGY

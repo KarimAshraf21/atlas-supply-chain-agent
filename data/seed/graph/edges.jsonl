@@ -192,14 +192,16 @@
 {"type": "ORIGIN", "source": "LANE-CNNGB-EGSOK-SEA", "target": "CNNGB", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNNGB-EGSOK-SEA", "target": "EGSOK", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNNGB-EGSOK-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CNNGB-EGSOK-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-CNNGB-EGSOK-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNNGB-EGSOK-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNNGB-EGSOK-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNNGB-EGSOK-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 3}}
 {"type": "ORIGIN", "source": "LANE-CNNGB-EGPSD-ALT", "target": "CNNGB", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNNGB-EGPSD-ALT", "target": "EGPSD", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNNGB-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CNNGB-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-CNNGB-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-CNNGB-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-CNNGB-EGPSD-ALT", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNNGB-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNNGB-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-CNNGB-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 4}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-CNNGB-EGPSD-ALT", "target": "LANE-CNNGB-EGSOK-SEA", "props": {"extra_days": 22, "extra_cost_pct": 103.3}}
 {"type": "SHIPS_VIA", "source": "SUP-ZHENGYUAN", "target": "LANE-CNNGB-EGSOK-SEA", "props": {"annual_teu": 822}}
 {"type": "SUPPLIES_TO", "source": "SUP-ZHENGYUAN", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 6547000.0}}
@@ -250,35 +252,35 @@
 {"type": "OPERATED_BY", "source": "LANE-TWKHH-MAPTM-AIR", "target": "LP-FALCON", "props": {}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-TWKHH-MAPTM-AIR", "target": "LANE-TWKHH-MAPTM-SEA", "props": {"extra_days": -22, "extra_cost_pct": 1448.4}}
 {"type": "SHIPS_VIA", "source": "SUP-FORMOSIC", "target": "LANE-TWKHH-MAPTM-SEA", "props": {"annual_teu": 856}}
-{"type": "ORIGIN", "source": "LANE-TWKHH-EGPSD-SEA", "target": "TWKHH", "props": {}}
-{"type": "DESTINATION", "source": "LANE-TWKHH-EGPSD-SEA", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-TWKHH-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-TWKHH-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-TWKHH-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-TWKHH-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 3}}
+{"type": "ORIGIN", "source": "LANE-TWKHH-EGSOK-SEA", "target": "TWKHH", "props": {}}
+{"type": "DESTINATION", "source": "LANE-TWKHH-EGSOK-SEA", "target": "EGSOK", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-TWKHH-EGSOK-SEA", "target": "LP-ORIENT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-TWKHH-EGSOK-SEA", "target": "MALACCA", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-TWKHH-EGSOK-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
 {"type": "ORIGIN", "source": "LANE-TWKHH-EGPSD-ALT", "target": "TWKHH", "props": {}}
 {"type": "DESTINATION", "source": "LANE-TWKHH-EGPSD-ALT", "target": "EGPSD", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-TWKHH-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
 {"type": "TRANSITS", "source": "LANE-TWKHH-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 1}}
 {"type": "TRANSITS", "source": "LANE-TWKHH-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 2}}
 {"type": "TRANSITS", "source": "LANE-TWKHH-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 3}}
-{"type": "ALTERNATIVE_TO", "source": "LANE-TWKHH-EGPSD-ALT", "target": "LANE-TWKHH-EGPSD-SEA", "props": {"extra_days": 17, "extra_cost_pct": 85.3}}
-{"type": "ORIGIN", "source": "LANE-TWKHH-EGPSD-AIR", "target": "TWKHH", "props": {}}
-{"type": "DESTINATION", "source": "LANE-TWKHH-EGPSD-AIR", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-TWKHH-EGPSD-AIR", "target": "LP-FALCON", "props": {}}
-{"type": "ALTERNATIVE_TO", "source": "LANE-TWKHH-EGPSD-AIR", "target": "LANE-TWKHH-EGPSD-SEA", "props": {"extra_days": -20, "extra_cost_pct": 1578.3}}
-{"type": "SHIPS_VIA", "source": "SUP-FORMOSIC", "target": "LANE-TWKHH-EGPSD-SEA", "props": {"annual_teu": 120}}
-{"type": "ORIGIN", "source": "LANE-TWKHH-EGSOK-SEA", "target": "TWKHH", "props": {}}
-{"type": "DESTINATION", "source": "LANE-TWKHH-EGSOK-SEA", "target": "EGSOK", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-TWKHH-EGSOK-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-TWKHH-EGSOK-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-TWKHH-EGSOK-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-TWKHH-EGPSD-ALT", "target": "LANE-TWKHH-EGSOK-SEA", "props": {"extra_days": 22, "extra_cost_pct": 110.3}}
 {"type": "ORIGIN", "source": "LANE-TWKHH-EGSOK-AIR", "target": "TWKHH", "props": {}}
 {"type": "DESTINATION", "source": "LANE-TWKHH-EGSOK-AIR", "target": "EGSOK", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-TWKHH-EGSOK-AIR", "target": "LP-FALCON", "props": {}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-TWKHH-EGSOK-AIR", "target": "LANE-TWKHH-EGSOK-SEA", "props": {"extra_days": -17, "extra_cost_pct": 1804.8}}
-{"type": "SHIPS_VIA", "source": "SUP-FORMOSIC", "target": "LANE-TWKHH-EGSOK-SEA", "props": {"annual_teu": 480}}
+{"type": "SHIPS_VIA", "source": "SUP-FORMOSIC", "target": "LANE-TWKHH-EGSOK-SEA", "props": {"annual_teu": 120}}
+{"type": "ORIGIN", "source": "LANE-TWKHH-EGPSD-SEA", "target": "TWKHH", "props": {}}
+{"type": "DESTINATION", "source": "LANE-TWKHH-EGPSD-SEA", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-TWKHH-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-TWKHH-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-TWKHH-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-TWKHH-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 3}}
+{"type": "ALTERNATIVE_TO", "source": "LANE-TWKHH-EGPSD-ALT", "target": "LANE-TWKHH-EGPSD-SEA", "props": {"extra_days": 19, "extra_cost_pct": 85.3}}
+{"type": "ORIGIN", "source": "LANE-TWKHH-EGPSD-AIR", "target": "TWKHH", "props": {}}
+{"type": "DESTINATION", "source": "LANE-TWKHH-EGPSD-AIR", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-TWKHH-EGPSD-AIR", "target": "LP-FALCON", "props": {}}
+{"type": "ALTERNATIVE_TO", "source": "LANE-TWKHH-EGPSD-AIR", "target": "LANE-TWKHH-EGPSD-SEA", "props": {"extra_days": -20, "extra_cost_pct": 1578.3}}
+{"type": "SHIPS_VIA", "source": "SUP-FORMOSIC", "target": "LANE-TWKHH-EGPSD-SEA", "props": {"annual_teu": 480}}
 {"type": "SUPPLIES_TO", "source": "SUP-FORMOSIC", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 5208000.0}}
 {"type": "LOCATED_IN", "source": "SUP-TAMSUI", "target": "TW", "props": {}}
 {"type": "OPERATES", "source": "SUP-TAMSUI", "target": "FAC-TAMSUI", "props": {}}
@@ -286,9 +288,9 @@
 {"type": "SERVED_BY", "source": "FAC-TAMSUI", "target": "TWKHH", "props": {"distance_km": 803.0}}
 {"type": "SUPPLIES", "source": "SUP-TAMSUI", "target": "CMP-MCU", "props": {"share_pct": 80.0, "unit_cost_usd": 6.49, "lead_time_days": 110}}
 {"type": "SUPPLIES", "source": "SUP-TAMSUI", "target": "CMP-DSP", "props": {"share_pct": 100.0, "unit_cost_usd": 13.58, "lead_time_days": 120}}
-{"type": "SHIPS_VIA", "source": "SUP-TAMSUI", "target": "LANE-TWKHH-EGPSD-SEA", "props": {"annual_teu": 426}}
-{"type": "SHIPS_VIA", "source": "SUP-TAMSUI", "target": "LANE-TWKHH-MAPTM-SEA", "props": {"annual_teu": 277}}
-{"type": "SHIPS_VIA", "source": "SUP-TAMSUI", "target": "LANE-TWKHH-EGSOK-SEA", "props": {"annual_teu": 405}}
+{"type": "SHIPS_VIA", "source": "SUP-TAMSUI", "target": "LANE-TWKHH-MAPTM-SEA", "props": {"annual_teu": 426}}
+{"type": "SHIPS_VIA", "source": "SUP-TAMSUI", "target": "LANE-TWKHH-EGPSD-SEA", "props": {"annual_teu": 277}}
+{"type": "SHIPS_VIA", "source": "SUP-TAMSUI", "target": "LANE-TWKHH-EGSOK-SEA", "props": {"annual_teu": 844}}
 {"type": "SUPPLIES_TO", "source": "SUP-TAMSUI", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 6457000.0}}
 {"type": "LOCATED_IN", "source": "SUP-PENANG", "target": "MY", "props": {}}
 {"type": "OPERATES", "source": "SUP-PENANG", "target": "FAC-PENANG", "props": {}}
@@ -297,24 +299,6 @@
 {"type": "SUPPLIES", "source": "SUP-PENANG", "target": "CMP-MCU", "props": {"share_pct": 20.0, "unit_cost_usd": 6.06, "lead_time_days": 110}}
 {"type": "SUPPLIES", "source": "SUP-PENANG", "target": "CMP-GATEDRV", "props": {"share_pct": 100.0, "unit_cost_usd": 3.12, "lead_time_days": 80}}
 {"type": "SUPPLIES", "source": "SUP-PENANG", "target": "CMP-BMS", "props": {"share_pct": 60.0, "unit_cost_usd": 64.59, "lead_time_days": 45}}
-{"type": "ORIGIN", "source": "LANE-MYPKG-EGPSD-SEA", "target": "MYPKG", "props": {}}
-{"type": "DESTINATION", "source": "LANE-MYPKG-EGPSD-SEA", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-MYPKG-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 3}}
-{"type": "ORIGIN", "source": "LANE-MYPKG-EGPSD-ALT", "target": "MYPKG", "props": {}}
-{"type": "DESTINATION", "source": "LANE-MYPKG-EGPSD-ALT", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-MYPKG-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
-{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 3}}
-{"type": "ALTERNATIVE_TO", "source": "LANE-MYPKG-EGPSD-ALT", "target": "LANE-MYPKG-EGPSD-SEA", "props": {"extra_days": 17, "extra_cost_pct": 100.0}}
-{"type": "ORIGIN", "source": "LANE-MYPKG-EGPSD-AIR", "target": "MYPKG", "props": {}}
-{"type": "DESTINATION", "source": "LANE-MYPKG-EGPSD-AIR", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-MYPKG-EGPSD-AIR", "target": "LP-FALCON", "props": {}}
-{"type": "ALTERNATIVE_TO", "source": "LANE-MYPKG-EGPSD-AIR", "target": "LANE-MYPKG-EGPSD-SEA", "props": {"extra_days": -16, "extra_cost_pct": 1875.3}}
-{"type": "SHIPS_VIA", "source": "SUP-PENANG", "target": "LANE-MYPKG-EGPSD-SEA", "props": {"annual_teu": 319}}
 {"type": "ORIGIN", "source": "LANE-MYPKG-MAPTM-SEA", "target": "MYPKG", "props": {}}
 {"type": "DESTINATION", "source": "LANE-MYPKG-MAPTM-SEA", "target": "MAPTM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-MYPKG-MAPTM-SEA", "target": "LP-ORIENT", "props": {}}
@@ -332,7 +316,25 @@
 {"type": "DESTINATION", "source": "LANE-MYPKG-MAPTM-AIR", "target": "MAPTM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-MYPKG-MAPTM-AIR", "target": "LP-FALCON", "props": {}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-MYPKG-MAPTM-AIR", "target": "LANE-MYPKG-MAPTM-SEA", "props": {"extra_days": -18, "extra_cost_pct": 1697.8}}
-{"type": "SHIPS_VIA", "source": "SUP-PENANG", "target": "LANE-MYPKG-MAPTM-SEA", "props": {"annual_teu": 314}}
+{"type": "SHIPS_VIA", "source": "SUP-PENANG", "target": "LANE-MYPKG-MAPTM-SEA", "props": {"annual_teu": 319}}
+{"type": "ORIGIN", "source": "LANE-MYPKG-EGPSD-SEA", "target": "MYPKG", "props": {}}
+{"type": "DESTINATION", "source": "LANE-MYPKG-EGPSD-SEA", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-MYPKG-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 3}}
+{"type": "ORIGIN", "source": "LANE-MYPKG-EGPSD-ALT", "target": "MYPKG", "props": {}}
+{"type": "DESTINATION", "source": "LANE-MYPKG-EGPSD-ALT", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-MYPKG-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
+{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-MYPKG-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 3}}
+{"type": "ALTERNATIVE_TO", "source": "LANE-MYPKG-EGPSD-ALT", "target": "LANE-MYPKG-EGPSD-SEA", "props": {"extra_days": 17, "extra_cost_pct": 100.0}}
+{"type": "ORIGIN", "source": "LANE-MYPKG-EGPSD-AIR", "target": "MYPKG", "props": {}}
+{"type": "DESTINATION", "source": "LANE-MYPKG-EGPSD-AIR", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-MYPKG-EGPSD-AIR", "target": "LP-FALCON", "props": {}}
+{"type": "ALTERNATIVE_TO", "source": "LANE-MYPKG-EGPSD-AIR", "target": "LANE-MYPKG-EGPSD-SEA", "props": {"extra_days": -16, "extra_cost_pct": 1875.3}}
+{"type": "SHIPS_VIA", "source": "SUP-PENANG", "target": "LANE-MYPKG-EGPSD-SEA", "props": {"annual_teu": 314}}
 {"type": "ORIGIN", "source": "LANE-MYPKG-EGSOK-SEA", "target": "MYPKG", "props": {}}
 {"type": "DESTINATION", "source": "LANE-MYPKG-EGSOK-SEA", "target": "EGSOK", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-MYPKG-EGSOK-SEA", "target": "LP-ORIENT", "props": {}}
@@ -353,15 +355,17 @@
 {"type": "ORIGIN", "source": "LANE-JPYOK-EGPSD-SEA", "target": "JPYOK", "props": {}}
 {"type": "DESTINATION", "source": "LANE-JPYOK-EGPSD-SEA", "target": "EGPSD", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-JPYOK-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 4}}
 {"type": "ORIGIN", "source": "LANE-JPYOK-EGPSD-ALT", "target": "JPYOK", "props": {}}
 {"type": "DESTINATION", "source": "LANE-JPYOK-EGPSD-ALT", "target": "EGPSD", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-JPYOK-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-ALT", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 4}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-JPYOK-EGPSD-ALT", "target": "LANE-JPYOK-EGPSD-SEA", "props": {"extra_days": 17, "extra_cost_pct": 74.5}}
 {"type": "ORIGIN", "source": "LANE-JPYOK-EGPSD-AIR", "target": "JPYOK", "props": {}}
 {"type": "DESTINATION", "source": "LANE-JPYOK-EGPSD-AIR", "target": "EGPSD", "props": {}}
@@ -392,20 +396,6 @@
 {"type": "SERVED_BY", "source": "FAC-XIAMEN", "target": "CNSZX", "props": {"distance_km": 544.0}}
 {"type": "SUPPLIES", "source": "SUP-XIAMEN", "target": "CMP-FILMCAP", "props": {"share_pct": 75.0, "unit_cost_usd": 9.79, "lead_time_days": 60}}
 {"type": "SUPPLIES", "source": "SUP-XIAMEN", "target": "CMP-CONTACTOR", "props": {"share_pct": 50.0, "unit_cost_usd": 27.73, "lead_time_days": 50}}
-{"type": "ORIGIN", "source": "LANE-CNSZX-EGPSD-SEA", "target": "CNSZX", "props": {}}
-{"type": "DESTINATION", "source": "LANE-CNSZX-EGPSD-SEA", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-CNSZX-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 3}}
-{"type": "ORIGIN", "source": "LANE-CNSZX-EGPSD-ALT", "target": "CNSZX", "props": {}}
-{"type": "DESTINATION", "source": "LANE-CNSZX-EGPSD-ALT", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-CNSZX-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 3}}
-{"type": "ALTERNATIVE_TO", "source": "LANE-CNSZX-EGPSD-ALT", "target": "LANE-CNSZX-EGPSD-SEA", "props": {"extra_days": 18, "extra_cost_pct": 85.9}}
-{"type": "SHIPS_VIA", "source": "SUP-XIAMEN", "target": "LANE-CNSZX-EGPSD-SEA", "props": {"annual_teu": 284}}
 {"type": "ORIGIN", "source": "LANE-CNSZX-MAPTM-SEA", "target": "CNSZX", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNSZX-MAPTM-SEA", "target": "MAPTM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNSZX-MAPTM-SEA", "target": "LP-ORIENT", "props": {}}
@@ -419,7 +409,21 @@
 {"type": "TRANSITS", "source": "LANE-CNSZX-MAPTM-ALT", "target": "MALACCA", "props": {"sequence": 1}}
 {"type": "TRANSITS", "source": "LANE-CNSZX-MAPTM-ALT", "target": "CAPE", "props": {"sequence": 2}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-CNSZX-MAPTM-ALT", "target": "LANE-CNSZX-MAPTM-SEA", "props": {"extra_days": 11, "extra_cost_pct": 53.1}}
-{"type": "SHIPS_VIA", "source": "SUP-XIAMEN", "target": "LANE-CNSZX-MAPTM-SEA", "props": {"annual_teu": 884}}
+{"type": "SHIPS_VIA", "source": "SUP-XIAMEN", "target": "LANE-CNSZX-MAPTM-SEA", "props": {"annual_teu": 284}}
+{"type": "ORIGIN", "source": "LANE-CNSZX-EGPSD-SEA", "target": "CNSZX", "props": {}}
+{"type": "DESTINATION", "source": "LANE-CNSZX-EGPSD-SEA", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-CNSZX-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 3}}
+{"type": "ORIGIN", "source": "LANE-CNSZX-EGPSD-ALT", "target": "CNSZX", "props": {}}
+{"type": "DESTINATION", "source": "LANE-CNSZX-EGPSD-ALT", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-CNSZX-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
+{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNSZX-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 3}}
+{"type": "ALTERNATIVE_TO", "source": "LANE-CNSZX-EGPSD-ALT", "target": "LANE-CNSZX-EGPSD-SEA", "props": {"extra_days": 18, "extra_cost_pct": 85.9}}
+{"type": "SHIPS_VIA", "source": "SUP-XIAMEN", "target": "LANE-CNSZX-EGPSD-SEA", "props": {"annual_teu": 884}}
 {"type": "ORIGIN", "source": "LANE-CNSZX-EGSOK-SEA", "target": "CNSZX", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNSZX-EGSOK-SEA", "target": "EGSOK", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNSZX-EGSOK-SEA", "target": "LP-ORIENT", "props": {}}
@@ -434,23 +438,23 @@
 {"type": "SERVED_BY", "source": "FAC-ANATOLIA", "target": "TRMER", "props": {"distance_km": 33.0}}
 {"type": "SUPPLIES", "source": "SUP-ANATOLIA", "target": "CMP-FILMCAP", "props": {"share_pct": 25.0, "unit_cost_usd": 9.37, "lead_time_days": 60}}
 {"type": "QUALIFIED_FOR", "source": "SUP-ANATOLIA", "target": "CMP-INDUCTOR", "props": {"ramp_up_days": 45, "max_share_pct": 60, "unit_cost_usd": 13.23}}
-{"type": "ORIGIN", "source": "LANE-TRMER-EGPSD-SEA", "target": "TRMER", "props": {}}
-{"type": "DESTINATION", "source": "LANE-TRMER-EGPSD-SEA", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-TRMER-EGPSD-SEA", "target": "LP-LEVANT", "props": {}}
-{"type": "SHIPS_VIA", "source": "SUP-ANATOLIA", "target": "LANE-TRMER-EGPSD-SEA", "props": {"annual_teu": 70}}
 {"type": "ORIGIN", "source": "LANE-TRMER-MAPTM-SEA", "target": "TRMER", "props": {}}
 {"type": "DESTINATION", "source": "LANE-TRMER-MAPTM-SEA", "target": "MAPTM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-TRMER-MAPTM-SEA", "target": "LP-LEVANT", "props": {}}
 {"type": "TRANSITS", "source": "LANE-TRMER-MAPTM-SEA", "target": "GIBRALTAR", "props": {"sequence": 1}}
-{"type": "SHIPS_VIA", "source": "SUP-ANATOLIA", "target": "LANE-TRMER-MAPTM-SEA", "props": {"annual_teu": 741}}
+{"type": "SHIPS_VIA", "source": "SUP-ANATOLIA", "target": "LANE-TRMER-MAPTM-SEA", "props": {"annual_teu": 70}}
+{"type": "ORIGIN", "source": "LANE-TRMER-EGPSD-SEA", "target": "TRMER", "props": {}}
+{"type": "DESTINATION", "source": "LANE-TRMER-EGPSD-SEA", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-TRMER-EGPSD-SEA", "target": "LP-LEVANT", "props": {}}
+{"type": "SHIPS_VIA", "source": "SUP-ANATOLIA", "target": "LANE-TRMER-EGPSD-SEA", "props": {"annual_teu": 741}}
 {"type": "SUPPLIES_TO", "source": "SUP-ANATOLIA", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 559000.0}}
 {"type": "LOCATED_IN", "source": "SUP-SHENGHUA", "target": "CN", "props": {}}
 {"type": "OPERATES", "source": "SUP-SHENGHUA", "target": "FAC-SHENGHUA", "props": {}}
 {"type": "LOCATED_IN", "source": "FAC-SHENGHUA", "target": "CN", "props": {}}
 {"type": "SERVED_BY", "source": "FAC-SHENGHUA", "target": "CNSZX", "props": {"distance_km": 607.0}}
 {"type": "SUPPLIES", "source": "SUP-SHENGHUA", "target": "CMP-INDUCTOR", "props": {"share_pct": 100.0, "unit_cost_usd": 12.93, "lead_time_days": 55}}
-{"type": "SHIPS_VIA", "source": "SUP-SHENGHUA", "target": "LANE-CNSZX-EGPSD-SEA", "props": {"annual_teu": 459}}
-{"type": "SHIPS_VIA", "source": "SUP-SHENGHUA", "target": "LANE-CNSZX-MAPTM-SEA", "props": {"annual_teu": 501}}
+{"type": "SHIPS_VIA", "source": "SUP-SHENGHUA", "target": "LANE-CNSZX-MAPTM-SEA", "props": {"annual_teu": 459}}
+{"type": "SHIPS_VIA", "source": "SUP-SHENGHUA", "target": "LANE-CNSZX-EGPSD-SEA", "props": {"annual_teu": 501}}
 {"type": "SUPPLIES_TO", "source": "SUP-SHENGHUA", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 1141000.0}}
 {"type": "LOCATED_IN", "source": "SUP-DELTAMV", "target": "EG", "props": {}}
 {"type": "OPERATES", "source": "SUP-DELTAMV", "target": "FAC-DELTAMV", "props": {}}
@@ -483,15 +487,15 @@
 {"type": "SERVED_BY", "source": "FAC-NILEMICRO", "target": "EGPSD", "props": {"distance_km": 368.0}}
 {"type": "SUPPLIES", "source": "SUP-NILEMICRO", "target": "CMP-PCBA", "props": {"share_pct": 50.0, "unit_cost_usd": 30.23, "lead_time_days": 40}}
 {"type": "SUPPLIES", "source": "SUP-NILEMICRO", "target": "CMP-BMS", "props": {"share_pct": 40.0, "unit_cost_usd": 64.49, "lead_time_days": 45}}
-{"type": "ORIGIN", "source": "LANE-EGPSD-EGPSD-RD", "target": "EGPSD", "props": {}}
-{"type": "DESTINATION", "source": "LANE-EGPSD-EGPSD-RD", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-EGPSD-EGPSD-RD", "target": "LP-NILEROAD", "props": {}}
-{"type": "SHIPS_VIA", "source": "SUP-NILEMICRO", "target": "LANE-EGPSD-EGPSD-RD", "props": {"annual_teu": 682}}
 {"type": "ORIGIN", "source": "LANE-EGPSD-MAPTM-SEA", "target": "EGPSD", "props": {}}
 {"type": "DESTINATION", "source": "LANE-EGPSD-MAPTM-SEA", "target": "MAPTM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-EGPSD-MAPTM-SEA", "target": "LP-LEVANT", "props": {}}
 {"type": "TRANSITS", "source": "LANE-EGPSD-MAPTM-SEA", "target": "GIBRALTAR", "props": {"sequence": 1}}
-{"type": "SHIPS_VIA", "source": "SUP-NILEMICRO", "target": "LANE-EGPSD-MAPTM-SEA", "props": {"annual_teu": 533}}
+{"type": "SHIPS_VIA", "source": "SUP-NILEMICRO", "target": "LANE-EGPSD-MAPTM-SEA", "props": {"annual_teu": 682}}
+{"type": "ORIGIN", "source": "LANE-EGPSD-EGPSD-RD", "target": "EGPSD", "props": {}}
+{"type": "DESTINATION", "source": "LANE-EGPSD-EGPSD-RD", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-EGPSD-EGPSD-RD", "target": "LP-NILEROAD", "props": {}}
+{"type": "SHIPS_VIA", "source": "SUP-NILEMICRO", "target": "LANE-EGPSD-EGPSD-RD", "props": {"annual_teu": 533}}
 {"type": "SHIPS_VIA", "source": "SUP-NILEMICRO", "target": "LANE-EGPSD-EGSOK-RD", "props": {"annual_teu": 844}}
 {"type": "SUPPLIES_TO", "source": "SUP-NILEMICRO", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 13255000.0}}
 {"type": "LOCATED_IN", "source": "SUP-PEARL", "target": "CN", "props": {}}
@@ -501,9 +505,9 @@
 {"type": "SUPPLIES", "source": "SUP-PEARL", "target": "CMP-PCBA", "props": {"share_pct": 50.0, "unit_cost_usd": 27.08, "lead_time_days": 40}}
 {"type": "SUPPLIES", "source": "SUP-PEARL", "target": "CMP-COMMS", "props": {"share_pct": 100.0, "unit_cost_usd": 10.59, "lead_time_days": 50}}
 {"type": "SUPPLIES", "source": "SUP-PEARL", "target": "CMP-DISPLAY", "props": {"share_pct": 70.0, "unit_cost_usd": 31.46, "lead_time_days": 45}}
-{"type": "SHIPS_VIA", "source": "SUP-PEARL", "target": "LANE-CNSZX-EGPSD-SEA", "props": {"annual_teu": 691}}
-{"type": "SHIPS_VIA", "source": "SUP-PEARL", "target": "LANE-CNSZX-MAPTM-SEA", "props": {"annual_teu": 631}}
-{"type": "SHIPS_VIA", "source": "SUP-PEARL", "target": "LANE-CNSZX-EGSOK-SEA", "props": {"annual_teu": 521}}
+{"type": "SHIPS_VIA", "source": "SUP-PEARL", "target": "LANE-CNSZX-MAPTM-SEA", "props": {"annual_teu": 691}}
+{"type": "SHIPS_VIA", "source": "SUP-PEARL", "target": "LANE-CNSZX-EGPSD-SEA", "props": {"annual_teu": 631}}
+{"type": "SHIPS_VIA", "source": "SUP-PEARL", "target": "LANE-CNSZX-EGSOK-SEA", "props": {"annual_teu": 555}}
 {"type": "SUPPLIES_TO", "source": "SUP-PEARL", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 12379000.0}}
 {"type": "LOCATED_IN", "source": "SUP-GYEONGGI", "target": "KR", "props": {}}
 {"type": "OPERATES", "source": "SUP-GYEONGGI", "target": "FAC-GYEONGGI", "props": {}}
@@ -513,38 +517,43 @@
 {"type": "ORIGIN", "source": "LANE-KRPUS-MAPTM-SEA", "target": "KRPUS", "props": {}}
 {"type": "DESTINATION", "source": "LANE-KRPUS-MAPTM-SEA", "target": "MAPTM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-KRPUS-MAPTM-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-SEA", "target": "SUEZ", "props": {"sequence": 3}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-SEA", "target": "GIBRALTAR", "props": {"sequence": 4}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-SEA", "target": "SUEZ", "props": {"sequence": 4}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-SEA", "target": "GIBRALTAR", "props": {"sequence": 5}}
 {"type": "ORIGIN", "source": "LANE-KRPUS-MAPTM-ALT", "target": "KRPUS", "props": {}}
 {"type": "DESTINATION", "source": "LANE-KRPUS-MAPTM-ALT", "target": "MAPTM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-KRPUS-MAPTM-ALT", "target": "LP-CAPEEX", "props": {}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-ALT", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-ALT", "target": "CAPE", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-ALT", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-ALT", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-MAPTM-ALT", "target": "CAPE", "props": {"sequence": 3}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-KRPUS-MAPTM-ALT", "target": "LANE-KRPUS-MAPTM-SEA", "props": {"extra_days": 10, "extra_cost_pct": 48.5}}
 {"type": "SHIPS_VIA", "source": "SUP-GYEONGGI", "target": "LANE-KRPUS-MAPTM-SEA", "props": {"annual_teu": 847}}
-{"type": "ORIGIN", "source": "LANE-KRPUS-EGPSD-SEA", "target": "KRPUS", "props": {}}
-{"type": "DESTINATION", "source": "LANE-KRPUS-EGPSD-SEA", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-KRPUS-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 3}}
-{"type": "ORIGIN", "source": "LANE-KRPUS-EGPSD-ALT", "target": "KRPUS", "props": {}}
-{"type": "DESTINATION", "source": "LANE-KRPUS-EGPSD-ALT", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-KRPUS-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 3}}
-{"type": "ALTERNATIVE_TO", "source": "LANE-KRPUS-EGPSD-ALT", "target": "LANE-KRPUS-EGPSD-SEA", "props": {"extra_days": 17, "extra_cost_pct": 78.2}}
-{"type": "SHIPS_VIA", "source": "SUP-GYEONGGI", "target": "LANE-KRPUS-EGPSD-SEA", "props": {"annual_teu": 464}}
 {"type": "ORIGIN", "source": "LANE-KRPUS-EGSOK-SEA", "target": "KRPUS", "props": {}}
 {"type": "DESTINATION", "source": "LANE-KRPUS-EGSOK-SEA", "target": "EGSOK", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-KRPUS-EGSOK-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-EGSOK-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-KRPUS-EGSOK-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGSOK-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGSOK-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGSOK-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 3}}
+{"type": "ORIGIN", "source": "LANE-KRPUS-EGPSD-ALT", "target": "KRPUS", "props": {}}
+{"type": "DESTINATION", "source": "LANE-KRPUS-EGPSD-ALT", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-KRPUS-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-ALT", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 4}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-KRPUS-EGPSD-ALT", "target": "LANE-KRPUS-EGSOK-SEA", "props": {"extra_days": 22, "extra_cost_pct": 100.0}}
-{"type": "SHIPS_VIA", "source": "SUP-GYEONGGI", "target": "LANE-KRPUS-EGSOK-SEA", "props": {"annual_teu": 591}}
+{"type": "SHIPS_VIA", "source": "SUP-GYEONGGI", "target": "LANE-KRPUS-EGSOK-SEA", "props": {"annual_teu": 464}}
+{"type": "ORIGIN", "source": "LANE-KRPUS-EGPSD-SEA", "target": "KRPUS", "props": {}}
+{"type": "DESTINATION", "source": "LANE-KRPUS-EGPSD-SEA", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-KRPUS-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 4}}
+{"type": "ALTERNATIVE_TO", "source": "LANE-KRPUS-EGPSD-ALT", "target": "LANE-KRPUS-EGPSD-SEA", "props": {"extra_days": 19, "extra_cost_pct": 78.2}}
+{"type": "SHIPS_VIA", "source": "SUP-GYEONGGI", "target": "LANE-KRPUS-EGPSD-SEA", "props": {"annual_teu": 591}}
 {"type": "SUPPLIES_TO", "source": "SUP-GYEONGGI", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 2846000.0}}
 {"type": "LOCATED_IN", "source": "SUP-ALEXCAST", "target": "EG", "props": {}}
 {"type": "OPERATES", "source": "SUP-ALEXCAST", "target": "FAC-ALEXCAST", "props": {}}
@@ -556,14 +565,14 @@
 {"type": "OPERATED_BY", "source": "LANE-EGALY-MAPTM-SEA", "target": "LP-LEVANT", "props": {}}
 {"type": "TRANSITS", "source": "LANE-EGALY-MAPTM-SEA", "target": "GIBRALTAR", "props": {"sequence": 1}}
 {"type": "SHIPS_VIA", "source": "SUP-ALEXCAST", "target": "LANE-EGALY-MAPTM-SEA", "props": {"annual_teu": 488}}
-{"type": "ORIGIN", "source": "LANE-EGALY-EGPSD-RD", "target": "EGALY", "props": {}}
-{"type": "DESTINATION", "source": "LANE-EGALY-EGPSD-RD", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-EGALY-EGPSD-RD", "target": "LP-NILEROAD", "props": {}}
-{"type": "SHIPS_VIA", "source": "SUP-ALEXCAST", "target": "LANE-EGALY-EGPSD-RD", "props": {"annual_teu": 851}}
 {"type": "ORIGIN", "source": "LANE-EGALY-EGSOK-RD", "target": "EGALY", "props": {}}
 {"type": "DESTINATION", "source": "LANE-EGALY-EGSOK-RD", "target": "EGSOK", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-EGALY-EGSOK-RD", "target": "LP-NILEROAD", "props": {}}
-{"type": "SHIPS_VIA", "source": "SUP-ALEXCAST", "target": "LANE-EGALY-EGSOK-RD", "props": {"annual_teu": 120}}
+{"type": "SHIPS_VIA", "source": "SUP-ALEXCAST", "target": "LANE-EGALY-EGSOK-RD", "props": {"annual_teu": 851}}
+{"type": "ORIGIN", "source": "LANE-EGALY-EGPSD-RD", "target": "EGALY", "props": {}}
+{"type": "DESTINATION", "source": "LANE-EGALY-EGPSD-RD", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-EGALY-EGPSD-RD", "target": "LP-NILEROAD", "props": {}}
+{"type": "SHIPS_VIA", "source": "SUP-ALEXCAST", "target": "LANE-EGALY-EGPSD-RD", "props": {"annual_teu": 120}}
 {"type": "SUPPLIES_TO", "source": "SUP-ALEXCAST", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 3047000.0}}
 {"type": "LOCATED_IN", "source": "SUP-KONYA", "target": "TR", "props": {}}
 {"type": "OPERATES", "source": "SUP-KONYA", "target": "FAC-KONYA", "props": {}}
@@ -571,16 +580,16 @@
 {"type": "SERVED_BY", "source": "FAC-KONYA", "target": "TRMER", "props": {"distance_km": 648.0}}
 {"type": "SUPPLIES", "source": "SUP-KONYA", "target": "CMP-ENCL", "props": {"share_pct": 30.0, "unit_cost_usd": 23.63, "lead_time_days": 35}}
 {"type": "SHIPS_VIA", "source": "SUP-KONYA", "target": "LANE-TRMER-MAPTM-SEA", "props": {"annual_teu": 285}}
-{"type": "SHIPS_VIA", "source": "SUP-KONYA", "target": "LANE-TRMER-EGPSD-SEA", "props": {"annual_teu": 483}}
-{"type": "SHIPS_VIA", "source": "SUP-KONYA", "target": "LANE-TRMER-EGSOK-SEA", "props": {"annual_teu": 207}}
+{"type": "SHIPS_VIA", "source": "SUP-KONYA", "target": "LANE-TRMER-EGSOK-SEA", "props": {"annual_teu": 483}}
+{"type": "SHIPS_VIA", "source": "SUP-KONYA", "target": "LANE-TRMER-EGPSD-SEA", "props": {"annual_teu": 207}}
 {"type": "SUPPLIES_TO", "source": "SUP-KONYA", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 2562000.0}}
 {"type": "LOCATED_IN", "source": "SUP-DELTACU", "target": "EG", "props": {}}
 {"type": "OPERATES", "source": "SUP-DELTACU", "target": "FAC-DELTACU", "props": {}}
 {"type": "LOCATED_IN", "source": "FAC-DELTACU", "target": "EG", "props": {}}
 {"type": "SERVED_BY", "source": "FAC-DELTACU", "target": "EGPSD", "props": {"distance_km": 760.0}}
 {"type": "SUPPLIES", "source": "SUP-DELTACU", "target": "CMP-BUSBAR", "props": {"share_pct": 100.0, "unit_cost_usd": 17.94, "lead_time_days": 30}}
-{"type": "SHIPS_VIA", "source": "SUP-DELTACU", "target": "LANE-EGPSD-EGPSD-RD", "props": {"annual_teu": 85}}
-{"type": "SHIPS_VIA", "source": "SUP-DELTACU", "target": "LANE-EGPSD-EGSOK-RD", "props": {"annual_teu": 684}}
+{"type": "SHIPS_VIA", "source": "SUP-DELTACU", "target": "LANE-EGPSD-EGSOK-RD", "props": {"annual_teu": 85}}
+{"type": "SHIPS_VIA", "source": "SUP-DELTACU", "target": "LANE-EGPSD-EGPSD-RD", "props": {"annual_teu": 684}}
 {"type": "SUPPLIES_TO", "source": "SUP-DELTACU", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 2447000.0}}
 {"type": "LOCATED_IN", "source": "SUP-BOXWORKS", "target": "CN", "props": {}}
 {"type": "OPERATES", "source": "SUP-BOXWORKS", "target": "FAC-BOXWORKS", "props": {}}
@@ -590,14 +599,16 @@
 {"type": "ORIGIN", "source": "LANE-CNSHA-EGSOK-SEA", "target": "CNSHA", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNSHA-EGSOK-SEA", "target": "EGSOK", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNSHA-EGSOK-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-EGSOK-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-EGSOK-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGSOK-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGSOK-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGSOK-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 3}}
 {"type": "ORIGIN", "source": "LANE-CNSHA-EGPSD-ALT", "target": "CNSHA", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNSHA-EGPSD-ALT", "target": "EGPSD", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNSHA-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-ALT", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-ALT", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-ALT", "target": "CAPE", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 4}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-CNSHA-EGPSD-ALT", "target": "LANE-CNSHA-EGSOK-SEA", "props": {"extra_days": 22, "extra_cost_pct": 103.0}}
 {"type": "SHIPS_VIA", "source": "SUP-BOXWORKS", "target": "LANE-CNSHA-EGSOK-SEA", "props": {"annual_teu": 785}}
 {"type": "SUPPLIES_TO", "source": "SUP-BOXWORKS", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 5051647000.0}}
@@ -680,11 +691,6 @@
 {"type": "DESTINATION", "source": "LANE-MAPTM-MAPTM-RD", "target": "MAPTM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-MAPTM-MAPTM-RD", "target": "LP-NILEROAD", "props": {}}
 {"type": "SHIPS_VIA", "source": "SUP-DETROIT", "target": "LANE-MAPTM-MAPTM-RD", "props": {"annual_teu": 523}}
-{"type": "ORIGIN", "source": "LANE-MAPTM-EGPSD-SEA", "target": "MAPTM", "props": {}}
-{"type": "DESTINATION", "source": "LANE-MAPTM-EGPSD-SEA", "target": "EGPSD", "props": {}}
-{"type": "OPERATED_BY", "source": "LANE-MAPTM-EGPSD-SEA", "target": "LP-LEVANT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-MAPTM-EGPSD-SEA", "target": "GIBRALTAR", "props": {"sequence": 1}}
-{"type": "SHIPS_VIA", "source": "SUP-DETROIT", "target": "LANE-MAPTM-EGPSD-SEA", "props": {"annual_teu": 726}}
 {"type": "ORIGIN", "source": "LANE-MAPTM-EGSOK-SEA", "target": "MAPTM", "props": {}}
 {"type": "DESTINATION", "source": "LANE-MAPTM-EGSOK-SEA", "target": "EGSOK", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-MAPTM-EGSOK-SEA", "target": "LP-LEVANT", "props": {}}
@@ -695,7 +701,12 @@
 {"type": "OPERATED_BY", "source": "LANE-MAPTM-EGPSD-ALT", "target": "LP-CAPEEX", "props": {}}
 {"type": "TRANSITS", "source": "LANE-MAPTM-EGPSD-ALT", "target": "GIBRALTAR", "props": {"sequence": 1}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-MAPTM-EGPSD-ALT", "target": "LANE-MAPTM-EGSOK-SEA", "props": {"extra_days": 0, "extra_cost_pct": 4.5}}
-{"type": "SHIPS_VIA", "source": "SUP-DETROIT", "target": "LANE-MAPTM-EGSOK-SEA", "props": {"annual_teu": 757}}
+{"type": "SHIPS_VIA", "source": "SUP-DETROIT", "target": "LANE-MAPTM-EGSOK-SEA", "props": {"annual_teu": 726}}
+{"type": "ORIGIN", "source": "LANE-MAPTM-EGPSD-SEA", "target": "MAPTM", "props": {}}
+{"type": "DESTINATION", "source": "LANE-MAPTM-EGPSD-SEA", "target": "EGPSD", "props": {}}
+{"type": "OPERATED_BY", "source": "LANE-MAPTM-EGPSD-SEA", "target": "LP-LEVANT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-MAPTM-EGPSD-SEA", "target": "GIBRALTAR", "props": {"sequence": 1}}
+{"type": "SHIPS_VIA", "source": "SUP-DETROIT", "target": "LANE-MAPTM-EGPSD-SEA", "props": {"annual_teu": 757}}
 {"type": "SUPPLIES_TO", "source": "SUP-DETROIT", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 5663000.0}}
 {"type": "LOCATED_IN", "source": "SUP-TIANSHAN", "target": "CN", "props": {}}
 {"type": "OPERATES", "source": "SUP-TIANSHAN", "target": "FAC-TIANSHAN", "props": {}}
@@ -705,9 +716,10 @@
 {"type": "ORIGIN", "source": "LANE-CNSHA-EGPSD-SEA", "target": "CNSHA", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNSHA-EGPSD-SEA", "target": "EGPSD", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNSHA-EGPSD-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-EGPSD-SEA", "target": "SUEZ", "props": {"sequence": 4}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-CNSHA-EGPSD-ALT", "target": "LANE-CNSHA-EGPSD-SEA", "props": {"extra_days": 19, "extra_cost_pct": 79.7}}
 {"type": "SHIPS_VIA", "source": "SUP-TIANSHAN", "target": "LANE-CNSHA-EGPSD-SEA", "props": {"annual_teu": 154}}
 {"type": "SUPPLIES_TO", "source": "SUP-TIANSHAN", "target": "ORG-NILEWAVE", "props": {"annual_spend_usd": 22175000.0}}
@@ -743,6 +755,7 @@
 {"type": "ORIGIN", "source": "LANE-CNSHA-VNSGN-SEA", "target": "CNSHA", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNSHA-VNSGN-SEA", "target": "VNSGN", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNSHA-VNSGN-SEA", "target": "LP-LEVANT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-VNSGN-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
 {"type": "SHIPS_VIA", "source": "SUP-XIANGJIANG", "target": "LANE-CNSHA-VNSGN-SEA", "props": {"annual_teu": 209}}
 {"type": "LOCATED_IN", "source": "SUP-ULSAN", "target": "KR", "props": {}}
 {"type": "OPERATES", "source": "SUP-ULSAN", "target": "FAC-ULSAN", "props": {}}
@@ -753,6 +766,7 @@
 {"type": "ORIGIN", "source": "LANE-KRPUS-VNSGN-SEA", "target": "KRPUS", "props": {}}
 {"type": "DESTINATION", "source": "LANE-KRPUS-VNSGN-SEA", "target": "VNSGN", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-KRPUS-VNSGN-SEA", "target": "LP-LEVANT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-KRPUS-VNSGN-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
 {"type": "SHIPS_VIA", "source": "SUP-ULSAN", "target": "LANE-KRPUS-VNSGN-SEA", "props": {"annual_teu": 64}}
 {"type": "SUPPLIES_TO", "source": "SUP-ULSAN", "target": "SUP-HANSEONG", "props": {"annual_spend_usd": 24580000.0}}
 {"type": "LOCATED_IN", "source": "SUP-HEILONG", "target": "CN", "props": {}}
@@ -798,6 +812,7 @@
 {"type": "ORIGIN", "source": "LANE-JPYOK-VNSGN-SEA", "target": "JPYOK", "props": {}}
 {"type": "DESTINATION", "source": "LANE-JPYOK-VNSGN-SEA", "target": "VNSGN", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-JPYOK-VNSGN-SEA", "target": "LP-LEVANT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-VNSGN-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
 {"type": "SHIPS_VIA", "source": "SUP-EHIME", "target": "LANE-JPYOK-VNSGN-SEA", "props": {"annual_teu": 27}}
 {"type": "LOCATED_IN", "source": "SUP-DAEGU", "target": "KR", "props": {}}
 {"type": "OPERATES", "source": "SUP-DAEGU", "target": "FAC-DAEGU", "props": {}}
@@ -827,6 +842,7 @@
 {"type": "ORIGIN", "source": "LANE-TWKHH-JPYOK-SEA", "target": "TWKHH", "props": {}}
 {"type": "DESTINATION", "source": "LANE-TWKHH-JPYOK-SEA", "target": "JPYOK", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-TWKHH-JPYOK-SEA", "target": "LP-LEVANT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-TWKHH-JPYOK-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
 {"type": "SHIPS_VIA", "source": "SUP-HSINCHUWAFER", "target": "LANE-TWKHH-JPYOK-SEA", "props": {"annual_teu": 274}}
 {"type": "LOCATED_IN", "source": "SUP-KYUSHU", "target": "JP", "props": {}}
 {"type": "OPERATES", "source": "SUP-KYUSHU", "target": "FAC-KYUSHU", "props": {}}
@@ -838,15 +854,17 @@
 {"type": "ORIGIN", "source": "LANE-JPYOK-DEHAM-SEA", "target": "JPYOK", "props": {}}
 {"type": "DESTINATION", "source": "LANE-JPYOK-DEHAM-SEA", "target": "DEHAM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-JPYOK-DEHAM-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 2}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-SEA", "target": "SUEZ", "props": {"sequence": 3}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-SEA", "target": "GIBRALTAR", "props": {"sequence": 4}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-SEA", "target": "BAB_EL_MANDEB", "props": {"sequence": 3}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-SEA", "target": "SUEZ", "props": {"sequence": 4}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-SEA", "target": "GIBRALTAR", "props": {"sequence": 5}}
 {"type": "ORIGIN", "source": "LANE-JPYOK-DEHAM-ALT", "target": "JPYOK", "props": {}}
 {"type": "DESTINATION", "source": "LANE-JPYOK-DEHAM-ALT", "target": "DEHAM", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-JPYOK-DEHAM-ALT", "target": "LP-CAPEEX", "props": {}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-ALT", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-ALT", "target": "CAPE", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-ALT", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-ALT", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-JPYOK-DEHAM-ALT", "target": "CAPE", "props": {"sequence": 3}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-JPYOK-DEHAM-ALT", "target": "LANE-JPYOK-DEHAM-SEA", "props": {"extra_days": 9, "extra_cost_pct": 37.9}}
 {"type": "SHIPS_VIA", "source": "SUP-KYUSHU", "target": "LANE-JPYOK-DEHAM-SEA", "props": {"annual_teu": 227}}
 {"type": "LOCATED_IN", "source": "SUP-CAROLINASIC", "target": "US", "props": {}}
@@ -866,6 +884,7 @@
 {"type": "DESTINATION", "source": "LANE-USHOU-TWKHH-ALT", "target": "TWKHH", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-USHOU-TWKHH-ALT", "target": "LP-CAPEEX", "props": {}}
 {"type": "TRANSITS", "source": "LANE-USHOU-TWKHH-ALT", "target": "PANAMA", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-USHOU-TWKHH-ALT", "target": "TAIWAN_STRAIT", "props": {"sequence": 2}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-USHOU-TWKHH-ALT", "target": "LANE-USHOU-TWKHH-SEA", "props": {"extra_days": 1, "extra_cost_pct": 12.9}}
 {"type": "SHIPS_VIA", "source": "SUP-CAROLINASIC", "target": "LANE-USHOU-TWKHH-SEA", "props": {"annual_teu": 186}}
 {"type": "LOCATED_IN", "source": "SUP-SHANDONGSIC", "target": "CN", "props": {}}
@@ -877,6 +896,7 @@
 {"type": "ORIGIN", "source": "LANE-CNSHA-TWKHH-SEA", "target": "CNSHA", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNSHA-TWKHH-SEA", "target": "TWKHH", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNSHA-TWKHH-SEA", "target": "LP-LEVANT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-TWKHH-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
 {"type": "SHIPS_VIA", "source": "SUP-SHANDONGSIC", "target": "LANE-CNSHA-TWKHH-SEA", "props": {"annual_teu": 222}}
 {"type": "LOCATED_IN", "source": "SUP-YUNNANGA", "target": "CN", "props": {}}
 {"type": "OPERATES", "source": "SUP-YUNNANGA", "target": "FAC-YUNNANGA", "props": {}}
@@ -935,6 +955,7 @@
 {"type": "OPERATED_BY", "source": "LANE-AEJEA-CNNGB-SEA", "target": "LP-ORIENT", "props": {}}
 {"type": "TRANSITS", "source": "LANE-AEJEA-CNNGB-SEA", "target": "HORMUZ", "props": {"sequence": 1}}
 {"type": "TRANSITS", "source": "LANE-AEJEA-CNNGB-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-AEJEA-CNNGB-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 3}}
 {"type": "SHIPS_VIA", "source": "SUP-KHALIFAAL", "target": "LANE-AEJEA-CNNGB-SEA", "props": {"annual_teu": 218}}
 {"type": "SUPPLIES_TO", "source": "SUP-KHALIFAAL", "target": "SUP-TIANSHAN", "props": {"annual_spend_usd": 33610000.0}}
 {"type": "ORIGIN", "source": "LANE-AEJEA-CNSHA-SEA", "target": "AEJEA", "props": {}}
@@ -942,6 +963,7 @@
 {"type": "OPERATED_BY", "source": "LANE-AEJEA-CNSHA-SEA", "target": "LP-ORIENT", "props": {}}
 {"type": "TRANSITS", "source": "LANE-AEJEA-CNSHA-SEA", "target": "HORMUZ", "props": {"sequence": 1}}
 {"type": "TRANSITS", "source": "LANE-AEJEA-CNSHA-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-AEJEA-CNSHA-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 3}}
 {"type": "SHIPS_VIA", "source": "SUP-KHALIFAAL", "target": "LANE-AEJEA-CNSHA-SEA", "props": {"annual_teu": 353}}
 {"type": "LOCATED_IN", "source": "SUP-ATACAMACU", "target": "CL", "props": {}}
 {"type": "OPERATES", "source": "SUP-ATACAMACU", "target": "FAC-ATACAMACU", "props": {}}
@@ -959,6 +981,7 @@
 {"type": "ORIGIN", "source": "LANE-CLSAI-CNSZX-SEA", "target": "CLSAI", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CLSAI-CNSZX-SEA", "target": "CNSZX", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CLSAI-CNSZX-SEA", "target": "LP-ORIENT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-CLSAI-CNSZX-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
 {"type": "SHIPS_VIA", "source": "SUP-ATACAMACU", "target": "LANE-CLSAI-CNSZX-SEA", "props": {"annual_teu": 285}}
 {"type": "SUPPLIES_TO", "source": "SUP-ATACAMACU", "target": "SUP-DELTAMV", "props": {"annual_spend_usd": 14560000.0}}
 {"type": "SUPPLIES_TO", "source": "SUP-ATACAMACU", "target": "SUP-GULFCOOL", "props": {"annual_spend_usd": 43530000.0}}
@@ -973,8 +996,9 @@
 {"type": "ORIGIN", "source": "LANE-CLSAI-AEJEA-ALT", "target": "CLSAI", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CLSAI-AEJEA-ALT", "target": "AEJEA", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CLSAI-AEJEA-ALT", "target": "LP-CAPEEX", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CLSAI-AEJEA-ALT", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-CLSAI-AEJEA-ALT", "target": "HORMUZ", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CLSAI-AEJEA-ALT", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CLSAI-AEJEA-ALT", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CLSAI-AEJEA-ALT", "target": "HORMUZ", "props": {"sequence": 3}}
 {"type": "ALTERNATIVE_TO", "source": "LANE-CLSAI-AEJEA-ALT", "target": "LANE-CLSAI-AEJEA-SEA", "props": {"extra_days": 6, "extra_cost_pct": 24.9}}
 {"type": "SHIPS_VIA", "source": "SUP-ATACAMACU", "target": "LANE-CLSAI-AEJEA-SEA", "props": {"annual_teu": 294}}
 {"type": "SUPPLIES_TO", "source": "SUP-ATACAMACU", "target": "SUP-BOSPHORUS", "props": {"annual_spend_usd": 45570000.0}}
@@ -1015,7 +1039,8 @@
 {"type": "ORIGIN", "source": "LANE-CNSHA-INNSA-SEA", "target": "CNSHA", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNSHA-INNSA-SEA", "target": "INNSA", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNSHA-INNSA-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-INNSA-SEA", "target": "MALACCA", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-INNSA-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-INNSA-SEA", "target": "MALACCA", "props": {"sequence": 2}}
 {"type": "SHIPS_VIA", "source": "SUP-JUNGGAR", "target": "LANE-CNSHA-INNSA-SEA", "props": {"annual_teu": 170}}
 {"type": "LOCATED_IN", "source": "SUP-BAOTOUMAG", "target": "CN", "props": {}}
 {"type": "OPERATES", "source": "SUP-BAOTOUMAG", "target": "FAC-BAOTOUMAG", "props": {}}
@@ -1026,8 +1051,9 @@
 {"type": "ORIGIN", "source": "LANE-CNSHA-AEJEA-SEA", "target": "CNSHA", "props": {}}
 {"type": "DESTINATION", "source": "LANE-CNSHA-AEJEA-SEA", "target": "AEJEA", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-CNSHA-AEJEA-SEA", "target": "LP-ORIENT", "props": {}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-AEJEA-SEA", "target": "MALACCA", "props": {"sequence": 1}}
-{"type": "TRANSITS", "source": "LANE-CNSHA-AEJEA-SEA", "target": "HORMUZ", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-AEJEA-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-AEJEA-SEA", "target": "MALACCA", "props": {"sequence": 2}}
+{"type": "TRANSITS", "source": "LANE-CNSHA-AEJEA-SEA", "target": "HORMUZ", "props": {"sequence": 3}}
 {"type": "SHIPS_VIA", "source": "SUP-BAOTOUMAG", "target": "LANE-CNSHA-AEJEA-SEA", "props": {"annual_teu": 92}}
 {"type": "LOCATED_IN", "source": "SUP-SALARLI", "target": "CL", "props": {}}
 {"type": "OPERATES", "source": "SUP-SALARLI", "target": "FAC-SALARLI", "props": {}}
@@ -1059,6 +1085,7 @@
 {"type": "ORIGIN", "source": "LANE-AUFRE-CNSHA-SEA", "target": "AUFRE", "props": {}}
 {"type": "DESTINATION", "source": "LANE-AUFRE-CNSHA-SEA", "target": "CNSHA", "props": {}}
 {"type": "OPERATED_BY", "source": "LANE-AUFRE-CNSHA-SEA", "target": "LP-ORIENT", "props": {}}
+{"type": "TRANSITS", "source": "LANE-AUFRE-CNSHA-SEA", "target": "TAIWAN_STRAIT", "props": {"sequence": 1}}
 {"type": "SHIPS_VIA", "source": "SUP-GOLDFIELDS", "target": "LANE-AUFRE-CNSHA-SEA", "props": {"annual_teu": 171}}
 {"type": "STOCKS", "source": "FAC-10RAM", "target": "CMP-BUSBAR", "props": {"units": 2407, "days_of_cover": 46.9}}
 {"type": "STOCKS", "source": "FAC-10RAM", "target": "CMP-COMMS", "props": {"units": 8532, "days_of_cover": 40.5}}
@@ -4100,27 +4127,27 @@
 {"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-CNNGB-EGSOK-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-VNSGN-EGSOK-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-TWKHH-MAPTM-SEA", "props": {}}
-{"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-TWKHH-EGPSD-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-TWKHH-EGSOK-SEA", "props": {}}
-{"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-MYPKG-EGPSD-SEA", "props": {}}
+{"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-TWKHH-EGPSD-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-MYPKG-MAPTM-SEA", "props": {}}
+{"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-MYPKG-EGPSD-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-MYPKG-EGSOK-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-JPYOK-EGPSD-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-DEHAM-EGPSD-SEA", "props": {}}
-{"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-CNSZX-EGPSD-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-CNSZX-MAPTM-SEA", "props": {}}
+{"type": "COVERS", "source": "CTR-LOG-038", "target": "LANE-CNSZX-EGPSD-SEA", "props": {}}
 {"type": "PARTY_TO", "source": "ORG-NILEWAVE", "target": "CTR-LOG-039", "props": {}}
 {"type": "PARTY_TO", "source": "LP-LEVANT", "target": "CTR-LOG-039", "props": {}}
-{"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-TRMER-EGPSD-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-TRMER-MAPTM-SEA", "props": {}}
+{"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-TRMER-EGPSD-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-TRMER-EGSOK-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-EGPSD-MAPTM-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-EGALY-MAPTM-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-ITGOA-EGSOK-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-DEHAM-MAPTM-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-PLGDN-MAPTM-SEA", "props": {}}
-{"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-MAPTM-EGPSD-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-MAPTM-EGSOK-SEA", "props": {}}
+{"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-MAPTM-EGPSD-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-CNSHA-VNSGN-SEA", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-039", "target": "LANE-KRPUS-VNSGN-SEA", "props": {}}
 {"type": "PARTY_TO", "source": "ORG-NILEWAVE", "target": "CTR-LOG-040", "props": {}}
@@ -4129,11 +4156,11 @@
 {"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-VNSGN-EGPSD-ALT", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-TWKHH-MAPTM-ALT", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-TWKHH-EGPSD-ALT", "props": {}}
-{"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-MYPKG-EGPSD-ALT", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-MYPKG-MAPTM-ALT", "props": {}}
+{"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-MYPKG-EGPSD-ALT", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-JPYOK-EGPSD-ALT", "props": {}}
-{"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-CNSZX-EGPSD-ALT", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-CNSZX-MAPTM-ALT", "props": {}}
+{"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-CNSZX-EGPSD-ALT", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-TRMER-EGPSD-ALT", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-KRPUS-MAPTM-ALT", "props": {}}
 {"type": "COVERS", "source": "CTR-LOG-040", "target": "LANE-KRPUS-EGPSD-ALT", "props": {}}

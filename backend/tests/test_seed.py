@@ -53,7 +53,7 @@ def test_red_sea_lanes_have_cape_contingency(graph):
 
 def test_routing_respects_geography():
     path, _ = sea_route("CNSHA", "NLRTM")
-    assert chokepoints_on(path) == ["MALACCA", "BAB_EL_MANDEB", "SUEZ", "GIBRALTAR"]
+    assert chokepoints_on(path) == ["TAIWAN_STRAIT", "MALACCA", "BAB_EL_MANDEB", "SUEZ", "GIBRALTAR"]
     path, _ = sea_route("CNSHA", "NLRTM", frozenset({"BAB_EL_MANDEB", "SUEZ"}))
     assert "CAPE" in chokepoints_on(path)
     assert sea_route("CNSHA", "SAJED", frozenset({"BAB_EL_MANDEB", "SUEZ"})) is None

@@ -23,8 +23,8 @@ Deliveries are made DAP at the Buyer's nominated site. Lead times are confirmed 
 shall notify the Buyer of any expected delay of more than three (3) days.
 
 ## 3. Liquidated damages
-For each day of late delivery the Seller shall pay liquidated damages of USD 9,580,
-capped at ten percent (10%) of the annual contract value.
+For each day of late delivery the Seller shall pay liquidated damages of 0.1% of the value of
+the delayed delivery, capped at 5.0% of that delivery's value.
 
 ## 4. Exclusivity
 Penang Semicon Assembly is the exclusive source for the Products during the Term. The Buyer may only qualify alternative sources after a documented supply failure exceeding thirty (30) days.

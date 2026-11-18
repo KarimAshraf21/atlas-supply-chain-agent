@@ -148,8 +148,8 @@ Deliveries are made DAP at the Buyer's nominated site. Lead times are confirmed 
 shall notify the Buyer of any expected delay of more than three (3) days.
 
 ## 3. Liquidated damages
-For each day of late delivery the Seller shall pay liquidated damages of USD {c.get("penalty_per_day_usd", 0):,.0f},
-capped at ten percent (10%) of the annual contract value.{exclusivity}
+For each day of late delivery the Seller shall pay liquidated damages of {c.get("ld_pct_per_day", 0.1)}% of the value of
+the delayed delivery, capped at {c.get("ld_cap_pct", 10)}% of that delivery's value.{exclusivity}
 
 ## 5. Force majeure
 {fm}

@@ -472,6 +472,8 @@ class Generator:
                 end_date=end.isoformat(),
                 value_usd=round(value, -3),
                 penalty_per_day_usd=round(value * 0.0004, -1),
+                ld_pct_per_day=0.1,
+                ld_cap_pct=5.0,
                 force_majeure=True,
                 exclusivity=single,
                 min_volume_units=rng.randint(5, 60) * 1000,
@@ -504,6 +506,8 @@ class Generator:
                 end_date=(start + timedelta(days=1095)).isoformat(),
                 value_usd=round(value, -3),
                 penalty_per_day_usd=round(value * 0.0005, -2),
+                ld_pct_per_day=0.3 if cid in no_fm else 0.2,
+                ld_cap_pct=10.0,
                 force_majeure=cid not in no_fm,
                 exclusivity=False,
             )

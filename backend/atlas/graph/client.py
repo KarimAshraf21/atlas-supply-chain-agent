@@ -13,7 +13,11 @@ from ..config import get_settings
 @lru_cache
 def get_driver() -> Driver:
     s = get_settings()
-    return GraphDatabase.driver(s.neo4j_uri, auth=(s.neo4j_user, s.neo4j_password.get_secret_value()))
+    return GraphDatabase.driver(
+        s.neo4j_uri,
+        auth=(s.neo4j_user, s.neo4j_password.get_secret_value()),
+        notifications_disabled_classifications=["DEPRECATION"],
+    )
 
 
 @contextmanager

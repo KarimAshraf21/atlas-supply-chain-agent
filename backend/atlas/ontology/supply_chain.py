@@ -213,6 +213,13 @@ CLASSES: list[NodeClass] = [
             P(name="end_date", type=T.DATE),
             P(name="value_usd", type=T.FLOAT, unit="USD"),
             P(name="penalty_per_day_usd", type=T.FLOAT, unit="USD"),
+            P(
+                name="ld_pct_per_day",
+                type=T.FLOAT,
+                unit="%",
+                description="Liquidated damages per day of delay, as % of the delayed delivery value.",
+            ),
+            P(name="ld_cap_pct", type=T.FLOAT, unit="%", description="Cap on liquidated damages per delivery."),
             P(name="force_majeure", type=T.BOOLEAN),
             P(name="exclusivity", type=T.BOOLEAN),
             P(name="min_volume_units", type=T.INTEGER),

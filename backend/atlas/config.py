@@ -18,6 +18,12 @@ class Settings(BaseSettings):
     neo4j_database: str = "neo4j"
 
     groq_api_key: SecretStr | None = None
+    llm_reasoning_model: str = "openai/gpt-oss-120b"
+    llm_fast_model: str = "openai/gpt-oss-20b"
+    stt_model: str = "whisper-large-v3-turbo"
+
+    agent_max_steps: int = 6  # tool-calling rounds per specialist
+    agent_tool_timeout_s: float = 30.0
 
     seed_dir: Path = ROOT / "data" / "seed"
 
