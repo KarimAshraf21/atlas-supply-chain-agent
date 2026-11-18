@@ -1,0 +1,9 @@
+id,name,name_ar,lat,lon,share_of_global_trade_pct
+SUEZ,Suez Canal,قناة السويس,30.58,32.27,12.0
+BAB_EL_MANDEB,Bab el-Mandeb Strait,مضيق باب المندب,12.58,43.33,10.0
+HORMUZ,Strait of Hormuz,مضيق هرمز,26.57,56.25,20.0
+MALACCA,Strait of Malacca,مضيق ملقا,2.5,101.0,25.0
+TAIWAN_STRAIT,Taiwan Strait,مضيق تايوان,24.5,119.5,20.0
+GIBRALTAR,Strait of Gibraltar,مضيق جبل طارق,35.95,-5.6,8.0
+CAPE,Cape of Good Hope,رأس الرجاء الصالح,-34.8,19.0,3.0
+PANAMA,Panama Canal,قناة بنما,9.08,-79.68,5.0

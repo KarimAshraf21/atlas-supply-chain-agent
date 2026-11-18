@@ -1,0 +1,28 @@
+id,name,name_ar,region,political_risk
+EG,Egypt,مصر,MENA,0.45
+SA,Saudi Arabia,السعودية,MENA,0.35
+AE,United Arab Emirates,الإمارات,MENA,0.2
+MA,Morocco,المغرب,MENA,0.3
+TR,Türkiye,تركيا,Europe,0.45
+CN,China,الصين,East Asia,0.5
+TW,Taiwan,تايوان,East Asia,0.55
+KR,South Korea,كوريا الجنوبية,East Asia,0.25
+JP,Japan,اليابان,East Asia,0.15
+VN,Vietnam,فيتنام,Southeast Asia,0.35
+MY,Malaysia,ماليزيا,Southeast Asia,0.3
+SG,Singapore,سنغافورة,Southeast Asia,0.1
+IN,India,الهند,South Asia,0.35
+DE,Germany,ألمانيا,Europe,0.1
+NL,Netherlands,هولندا,Europe,0.1
+BE,Belgium,بلجيكا,Europe,0.1
+ES,Spain,إسبانيا,Europe,0.15
+IT,Italy,إيطاليا,Europe,0.2
+FR,France,فرنسا,Europe,0.15
+PL,Poland,بولندا,Europe,0.2
+CL,Chile,تشيلي,Latin America,0.35
+AU,Australia,أستراليا,Oceania,0.1
+ZA,South Africa,جنوب أفريقيا,Africa,0.45
+KE,Kenya,كينيا,Africa,0.45
+NG,Nigeria,نيجيريا,Africa,0.6
+MZ,Mozambique,موزمبيق,Africa,0.6
+US,United States,الولايات المتحدة,North America,0.2

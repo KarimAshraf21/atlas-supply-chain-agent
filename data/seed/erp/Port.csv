@@ -1,0 +1,32 @@
+id,name,name_ar,lat,lon,kind,congestion_index
+EGSOK,Ain Sokhna,العين السخنة,29.6,32.35,sea,0.35
+EGPSD,Port Said East,شرق بورسعيد,31.26,32.35,sea,0.4
+EGALY,Alexandria,الإسكندرية,31.18,29.87,sea,0.5
+SAJED,Jeddah Islamic Port,ميناء جدة الإسلامي,21.48,39.17,sea,0.45
+SADMM,King Abdulaziz Port Dammam,ميناء الملك عبدالعزيز بالدمام,26.5,50.2,sea,0.3
+AEJEA,Jebel Ali,جبل علي,25.01,55.06,sea,0.35
+MAPTM,Tanger Med,طنجة المتوسط,35.89,-5.5,sea,0.3
+TRMER,Mersin,مرسين,36.8,34.63,sea,0.4
+CNSHA,Shanghai,شنغهاي,31.23,121.8,sea,0.7
+CNNGB,Ningbo-Zhoushan,نينغبو,29.87,121.85,sea,0.6
+CNSZX,Shenzhen Yantian,شنتشن,22.57,114.27,sea,0.55
+TWKHH,Kaohsiung,كاوشيونغ,22.61,120.27,sea,0.4
+KRPUS,Busan,بوسان,35.1,129.04,sea,0.45
+JPYOK,Yokohama,يوكوهاما,35.45,139.65,sea,0.3
+VNSGN,Ho Chi Minh City (Cat Lai),هو تشي منه,10.76,106.79,sea,0.55
+MYPKG,Port Klang,بورت كلانج,3.0,101.39,sea,0.4
+SGSIN,Singapore,سنغافورة,1.26,103.82,sea,0.5
+INNSA,Nhava Sheva,نافا شيفا,18.95,72.95,sea,0.55
+NLRTM,Rotterdam,روتردام,51.95,4.14,sea,0.45
+DEHAM,Hamburg,هامبورغ,53.54,9.97,sea,0.5
+BEANR,Antwerp-Bruges,أنتويرب,51.26,4.4,sea,0.4
+ESVLC,Valencia,فالنسيا,39.44,-0.32,sea,0.35
+ITGOA,Genoa,جنوة,44.4,8.93,sea,0.4
+PLGDN,Gdańsk,غدانسك,54.4,18.67,sea,0.35
+CLSAI,San Antonio,سان أنطونيو,-33.59,-71.61,sea,0.3
+AUFRE,Fremantle,فريمانتل,-32.06,115.74,sea,0.2
+ZADUR,Durban,ديربان,-29.87,31.03,sea,0.5
+KEMBA,Mombasa,مومباسا,-4.04,39.67,sea,0.5
+MZMPM,Maputo,مابوتو,-25.97,32.57,sea,0.45
+NGAPP,Lagos Apapa,لاغوس,6.45,3.37,sea,0.75
+USHOU,Houston,هيوستن,29.73,-95.27,sea,0.35

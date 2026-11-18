@@ -1,0 +1,16 @@
+id,name,name_ar,category,hs_code,unit,unit_cost_usd,critical
+MAT-LI2CO3,Battery-grade lithium carbonate,كربونات الليثيوم,Critical minerals,283691,t,11500.0,True
+MAT-SPODUMENE,Spodumene concentrate (SC6),مركز السبودومين,Critical minerals,253090,t,980.0,True
+MAT-LFP,LFP cathode powder,مسحوق كاثود LFP,Battery materials,284290,t,6200.0,True
+MAT-GRAPHITE,Spherical graphite anode,جرافيت كروي للأنود,Critical minerals,250410,t,3900.0,True
+MAT-ELECTROLYTE,LiPF6 electrolyte,إلكتروليت,Battery materials,382499,t,8800.0,False
+MAT-SEPARATOR,Polypropylene separator film,غشاء فاصل,Battery materials,392020,km2,410.0,False
+MAT-CUFOIL,Battery copper foil 6 µm,رقائق النحاس,Metals,741011,t,12800.0,False
+MAT-CU,Copper cathode,كاثود النحاس,Metals,740311,t,9600.0,True
+MAT-AL,Primary aluminium ingot,سبائك الألومنيوم,Metals,760110,t,2600.0,True
+MAT-STEEL,Hot-rolled steel coil,لفائف الصلب,Metals,720839,t,690.0,False
+MAT-SIWAFER,300 mm silicon wafer,رقاقة سيليكون,Semiconductor materials,381800,pcs,120.0,False
+MAT-SICSUB,Silicon carbide substrate 150 mm,ركيزة كربيد السيليكون,Semiconductor materials,381800,pcs,850.0,True
+MAT-GALLIUM,High-purity gallium,الغاليوم,Critical minerals,811292,kg,520.0,True
+MAT-POLYSI,Solar-grade polysilicon,بولي سيليكون,Semiconductor materials,280461,t,7400.0,True
+MAT-NDFEB,NdFeB rare-earth magnets,مغناطيس العناصر الأرضية النادرة,Critical minerals,850511,kg,95.0,True

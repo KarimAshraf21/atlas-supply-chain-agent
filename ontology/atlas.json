@@ -1,0 +1,1775 @@
+{
+  "name": "Atlas Supply Chain Ontology",
+  "version": "1.0.0",
+  "namespace": "https://atlas.dev/ontology/supply-chain#",
+  "description": "Multi-tier supply network: organizations, facilities, items and bills of materials, logistics lanes through maritime chokepoints, commercial contracts and orders, tariffs, risk events and the documents that evidence them.",
+  "classes": [
+    {
+      "label": "Organization",
+      "description": "Any legal entity participating in the supply network.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "country_code",
+          "type": "string",
+          "description": "ISO 3166-1 alpha-2 of headquarters.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "website",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "منظمة",
+          "شركة"
+        ]
+      }
+    },
+    {
+      "label": "Company",
+      "description": "The focal company that owns this Atlas instance.",
+      "parent": "Organization",
+      "key": "id",
+      "properties": [
+        {
+          "name": "industry",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "annual_revenue_usd",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": "USD"
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "الشركة",
+          "شركتنا"
+        ]
+      }
+    },
+    {
+      "label": "Supplier",
+      "description": "Provides materials or components, directly (tier 1) or indirectly (tier 2+).",
+      "parent": "Organization",
+      "key": "id",
+      "properties": [
+        {
+          "name": "tier",
+          "type": "integer",
+          "description": "1 = direct supplier.",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "esg_score",
+          "type": "float",
+          "description": "0-100, higher is better.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "financial_health",
+          "type": "string",
+          "description": "Credit-style health rating.",
+          "required": false,
+          "enum": [
+            "strong",
+            "stable",
+            "watch",
+            "distressed"
+          ],
+          "unit": null
+        },
+        {
+          "name": "on_time_delivery_pct",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": "%"
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "مورد",
+          "موردين",
+          "المورد"
+        ]
+      }
+    },
+    {
+      "label": "Customer",
+      "description": "Buys finished products.",
+      "parent": "Organization",
+      "key": "id",
+      "properties": [
+        {
+          "name": "segment",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": [
+            "utility",
+            "distributor",
+            "installer",
+            "oem",
+            "retail"
+          ],
+          "unit": null
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "strategic",
+          "type": "boolean",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "عميل",
+          "عملاء",
+          "العميل"
+        ]
+      }
+    },
+    {
+      "label": "LogisticsProvider",
+      "description": "Carrier or freight forwarder operating shipping lanes.",
+      "parent": "Organization",
+      "key": "id",
+      "properties": [
+        {
+          "name": "mode",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": [
+            "sea",
+            "air",
+            "rail",
+            "road",
+            "multimodal"
+          ],
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "شركة شحن",
+          "ناقل"
+        ]
+      }
+    },
+    {
+      "label": "Facility",
+      "description": "A physical site.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "lat",
+          "type": "float",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "lon",
+          "type": "float",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "city",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "منشأة",
+          "موقع"
+        ]
+      }
+    },
+    {
+      "label": "Factory",
+      "description": "Manufactures components or products.",
+      "parent": "Facility",
+      "key": "id",
+      "properties": [
+        {
+          "name": "capacity_units_per_month",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "مصنع",
+          "المصنع"
+        ]
+      }
+    },
+    {
+      "label": "Warehouse",
+      "description": "Stores inventory.",
+      "parent": "Facility",
+      "key": "id",
+      "properties": [
+        {
+          "name": "capacity_pallets",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "مستودع",
+          "مخزن"
+        ]
+      }
+    },
+    {
+      "label": "Country",
+      "description": "Sovereign country; key is ISO 3166-1 alpha-2.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "name_ar",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "political_risk",
+          "type": "float",
+          "description": "0-1, higher is riskier.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "دولة",
+          "بلد"
+        ]
+      }
+    },
+    {
+      "label": "Port",
+      "description": "Sea or air port; key is UN/LOCODE.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "name_ar",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "lat",
+          "type": "float",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "lon",
+          "type": "float",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": [
+            "sea",
+            "air"
+          ],
+          "unit": null
+        },
+        {
+          "name": "congestion_index",
+          "type": "float",
+          "description": "0-1, higher is more congested.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "ميناء",
+          "الميناء"
+        ]
+      }
+    },
+    {
+      "label": "Chokepoint",
+      "description": "Maritime passage whose disruption forces rerouting.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "name_ar",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "lat",
+          "type": "float",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "lon",
+          "type": "float",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "share_of_global_trade_pct",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": "%"
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "ممر ملاحي",
+          "مضيق",
+          "قناة"
+        ]
+      }
+    },
+    {
+      "label": "Item",
+      "description": "Anything that can be bought, made, stocked or sold.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "name_ar",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "category",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "hs_code",
+          "type": "string",
+          "description": "Harmonized System tariff code.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "unit",
+          "type": "string",
+          "description": "Unit of measure.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "unit_cost_usd",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": "USD"
+        }
+      ],
+      "synonyms": {}
+    },
+    {
+      "label": "Material",
+      "description": "Raw or processed material (e.g. lithium carbonate, copper).",
+      "parent": "Item",
+      "key": "id",
+      "properties": [
+        {
+          "name": "critical",
+          "type": "boolean",
+          "description": "On a critical-minerals list.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "مادة خام",
+          "مواد خام"
+        ]
+      }
+    },
+    {
+      "label": "Component",
+      "description": "Purchased part that goes into a product.",
+      "parent": "Item",
+      "key": "id",
+      "properties": [
+        {
+          "name": "lead_time_days",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "مكون",
+          "قطعة",
+          "مكونات"
+        ]
+      }
+    },
+    {
+      "label": "Product",
+      "description": "Finished good sold to customers.",
+      "parent": "Item",
+      "key": "id",
+      "properties": [
+        {
+          "name": "sku",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "family",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "unit_price_usd",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": "USD"
+        },
+        {
+          "name": "gross_margin_pct",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": "%"
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "منتج",
+          "منتجات"
+        ]
+      }
+    },
+    {
+      "label": "ShippingLane",
+      "description": "A recurring origin→destination route with a mode and transit time.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "mode",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": [
+            "sea",
+            "air",
+            "rail",
+            "road"
+          ],
+          "unit": null
+        },
+        {
+          "name": "transit_days",
+          "type": "integer",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "cost_per_teu_usd",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": "USD"
+        },
+        {
+          "name": "co2_kg_per_teu",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "is_contingency",
+          "type": "boolean",
+          "description": "Backup route, not used by default.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "خط شحن",
+          "مسار"
+        ]
+      }
+    },
+    {
+      "label": "Contract",
+      "description": "Commercial agreement with a supplier, customer or carrier.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": [
+            "supply",
+            "sales",
+            "logistics"
+          ],
+          "unit": null
+        },
+        {
+          "name": "start_date",
+          "type": "date",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "end_date",
+          "type": "date",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "value_usd",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": "USD"
+        },
+        {
+          "name": "penalty_per_day_usd",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": "USD"
+        },
+        {
+          "name": "force_majeure",
+          "type": "boolean",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "exclusivity",
+          "type": "boolean",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "min_volume_units",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "عقد",
+          "عقود",
+          "اتفاقية"
+        ]
+      }
+    },
+    {
+      "label": "SalesOrder",
+      "description": "Customer order for a product.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "quantity",
+          "type": "integer",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "value_usd",
+          "type": "float",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": "USD"
+        },
+        {
+          "name": "order_date",
+          "type": "date",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "due_date",
+          "type": "date",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": [
+            "open",
+            "in_production",
+            "shipped",
+            "delivered",
+            "late"
+          ],
+          "unit": null
+        },
+        {
+          "name": "priority",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": [
+            "standard",
+            "high",
+            "critical"
+          ],
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "طلب",
+          "طلبية",
+          "أمر بيع"
+        ]
+      }
+    },
+    {
+      "label": "Tariff",
+      "description": "Import duty imposed by a country on goods from an origin.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "name",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "rate_pct",
+          "type": "float",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": "%"
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": [
+            "in_force",
+            "announced",
+            "proposed"
+          ],
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "تعريفة",
+          "رسوم جمركية",
+          "جمارك"
+        ]
+      }
+    },
+    {
+      "label": "RiskEvent",
+      "description": "Real-world event that can disrupt supply, logistics or demand.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "title_ar",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "type",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": [
+            "geopolitical",
+            "conflict",
+            "weather",
+            "labor_strike",
+            "tariff",
+            "cyber",
+            "financial",
+            "regulatory",
+            "pandemic",
+            "infrastructure"
+          ],
+          "unit": null
+        },
+        {
+          "name": "severity",
+          "type": "integer",
+          "description": "1 (minor) – 5 (critical).",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "probability",
+          "type": "float",
+          "description": "0-1 likelihood, 1 for ongoing events.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "status",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": [
+            "active",
+            "forecast",
+            "resolved"
+          ],
+          "unit": null
+        },
+        {
+          "name": "start_date",
+          "type": "date",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "expected_duration_days",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "summary",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "خطر",
+          "مخاطر",
+          "اضطراب",
+          "أزمة"
+        ]
+      }
+    },
+    {
+      "label": "Document",
+      "description": "Unstructured source (news, contract text, report) linked to graph entities.",
+      "parent": null,
+      "key": "id",
+      "properties": [
+        {
+          "name": "title",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "kind",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": [
+            "news",
+            "contract",
+            "report",
+            "email"
+          ],
+          "unit": null
+        },
+        {
+          "name": "language",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": [
+            "en",
+            "ar"
+          ],
+          "unit": null
+        },
+        {
+          "name": "published_date",
+          "type": "date",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "source",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "path",
+          "type": "string",
+          "description": "Relative path of the source file.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "text",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "synonyms": {
+        "ar": [
+          "مستند",
+          "خبر",
+          "تقرير"
+        ]
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "LOCATED_IN",
+      "description": "Physical or legal location.",
+      "source": [
+        "Organization",
+        "Facility",
+        "Port"
+      ],
+      "target": [
+        "Country"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "OPERATES",
+      "description": "Organization runs a facility.",
+      "source": [
+        "Organization"
+      ],
+      "target": [
+        "Facility"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "SERVED_BY",
+      "description": "Facility ships through a port.",
+      "source": [
+        "Facility"
+      ],
+      "target": [
+        "Port"
+      ],
+      "properties": [
+        {
+          "name": "distance_km",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "SUPPLIES",
+      "description": "Supplier sells an item.",
+      "source": [
+        "Supplier"
+      ],
+      "target": [
+        "Material",
+        "Component"
+      ],
+      "properties": [
+        {
+          "name": "share_pct",
+          "type": "float",
+          "description": "Share of the buyer's volume.",
+          "required": false,
+          "enum": null,
+          "unit": "%"
+        },
+        {
+          "name": "unit_cost_usd",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "lead_time_days",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "capacity_units_per_month",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "SUPPLIES_TO",
+      "description": "Commercial supply edge between organizations (builds the tier structure).",
+      "source": [
+        "Supplier"
+      ],
+      "target": [
+        "Company",
+        "Supplier"
+      ],
+      "properties": [
+        {
+          "name": "annual_spend_usd",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "QUALIFIED_FOR",
+      "description": "Supplier is qualified as an alternative source but not (fully) used.",
+      "source": [
+        "Supplier"
+      ],
+      "target": [
+        "Material",
+        "Component"
+      ],
+      "properties": [
+        {
+          "name": "ramp_up_days",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "max_share_pct",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "unit_cost_usd",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "REQUIRES",
+      "description": "Bill of materials: an item is built from another item.",
+      "source": [
+        "Material",
+        "Component",
+        "Product"
+      ],
+      "target": [
+        "Component",
+        "Material"
+      ],
+      "properties": [
+        {
+          "name": "quantity",
+          "type": "float",
+          "description": "",
+          "required": true,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "PRODUCES",
+      "description": "Factory manufactures an item.",
+      "source": [
+        "Factory"
+      ],
+      "target": [
+        "Product",
+        "Component"
+      ],
+      "properties": [
+        {
+          "name": "capacity_units_per_month",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "STOCKS",
+      "description": "Inventory position of an item at a facility.",
+      "source": [
+        "Facility"
+      ],
+      "target": [
+        "Material",
+        "Component",
+        "Product"
+      ],
+      "properties": [
+        {
+          "name": "units",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "days_of_cover",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "SHIPS_VIA",
+      "description": "Default lane used to move goods from a supplier or factory.",
+      "source": [
+        "Supplier",
+        "Factory"
+      ],
+      "target": [
+        "ShippingLane"
+      ],
+      "properties": [
+        {
+          "name": "annual_teu",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "ORIGIN",
+      "description": "Lane start port.",
+      "source": [
+        "ShippingLane"
+      ],
+      "target": [
+        "Port"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "DESTINATION",
+      "description": "Lane end port.",
+      "source": [
+        "ShippingLane"
+      ],
+      "target": [
+        "Port"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "TRANSITS",
+      "description": "Lane passes through a chokepoint.",
+      "source": [
+        "ShippingLane"
+      ],
+      "target": [
+        "Chokepoint"
+      ],
+      "properties": [
+        {
+          "name": "sequence",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "ALTERNATIVE_TO",
+      "description": "Contingency lane that can replace another lane.",
+      "source": [
+        "ShippingLane"
+      ],
+      "target": [
+        "ShippingLane"
+      ],
+      "properties": [
+        {
+          "name": "extra_days",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "extra_cost_pct",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "OPERATED_BY",
+      "description": "Carrier operating the lane.",
+      "source": [
+        "ShippingLane"
+      ],
+      "target": [
+        "LogisticsProvider"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "RECEIVES_AT",
+      "description": "Customer takes delivery at a port.",
+      "source": [
+        "Customer",
+        "Facility"
+      ],
+      "target": [
+        "Port"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "PLACED",
+      "description": "Customer placed an order.",
+      "source": [
+        "Customer"
+      ],
+      "target": [
+        "SalesOrder"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "FOR_PRODUCT",
+      "description": "Order line product.",
+      "source": [
+        "SalesOrder"
+      ],
+      "target": [
+        "Product"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "FULFILLED_BY",
+      "description": "Factory that builds the order.",
+      "source": [
+        "SalesOrder"
+      ],
+      "target": [
+        "Factory"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "PARTY_TO",
+      "description": "Organization signed a contract.",
+      "source": [
+        "Organization"
+      ],
+      "target": [
+        "Contract"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "COVERS",
+      "description": "What a contract governs.",
+      "source": [
+        "Contract"
+      ],
+      "target": [
+        "Material",
+        "Component",
+        "Product",
+        "ShippingLane"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "IMPOSED_BY",
+      "description": "Country levying the tariff.",
+      "source": [
+        "Tariff"
+      ],
+      "target": [
+        "Country"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "ON_ORIGIN",
+      "description": "Origin country targeted.",
+      "source": [
+        "Tariff"
+      ],
+      "target": [
+        "Country"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "TARGETS",
+      "description": "Goods subject to the tariff.",
+      "source": [
+        "Tariff"
+      ],
+      "target": [
+        "Material",
+        "Component",
+        "Product"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "AFFECTS",
+      "description": "Risk event impacts an entity.",
+      "source": [
+        "RiskEvent"
+      ],
+      "target": [
+        "Country",
+        "Port",
+        "Chokepoint",
+        "Organization",
+        "Facility",
+        "ShippingLane",
+        "Material",
+        "Component",
+        "Product"
+      ],
+      "properties": [
+        {
+          "name": "impact",
+          "type": "string",
+          "description": "",
+          "required": true,
+          "enum": [
+            "closure",
+            "delay",
+            "capacity_reduction",
+            "price_increase",
+            "insolvency"
+          ],
+          "unit": null
+        },
+        {
+          "name": "magnitude",
+          "type": "float",
+          "description": "0-1 share of capacity or flow lost.",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "added_days",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "MENTIONS",
+      "description": "Document references an entity.",
+      "source": [
+        "Document"
+      ],
+      "target": [
+        "Organization",
+        "Facility",
+        "Country",
+        "Port",
+        "Chokepoint",
+        "Material",
+        "Component",
+        "Product",
+        "RiskEvent",
+        "Contract",
+        "ShippingLane"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "EVIDENCES",
+      "description": "Document is the text of a contract.",
+      "source": [
+        "Document"
+      ],
+      "target": [
+        "Contract"
+      ],
+      "properties": [],
+      "inferred": false,
+      "inverse_name": null
+    },
+    {
+      "type": "DEPENDS_ON",
+      "description": "Product transitively depends on a supplier through its BOM.",
+      "source": [
+        "Product"
+      ],
+      "target": [
+        "Supplier"
+      ],
+      "properties": [
+        {
+          "name": "tier",
+          "type": "integer",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "via",
+          "type": "string[]",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "rule",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": true,
+      "inverse_name": null
+    },
+    {
+      "type": "SINGLE_SOURCE",
+      "description": "Item has exactly one active supplier and no qualified alternative.",
+      "source": [
+        "Supplier"
+      ],
+      "target": [
+        "Material",
+        "Component"
+      ],
+      "properties": [
+        {
+          "name": "rule",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": true,
+      "inverse_name": null
+    },
+    {
+      "type": "ROUTED_THROUGH",
+      "description": "Supplier's inbound flow crosses a chokepoint.",
+      "source": [
+        "Supplier"
+      ],
+      "target": [
+        "Chokepoint"
+      ],
+      "properties": [
+        {
+          "name": "lane",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "rule",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": true,
+      "inverse_name": null
+    },
+    {
+      "type": "EXPOSED_TO",
+      "description": "Entity is exposed to a risk event through some path.",
+      "source": [
+        "Supplier",
+        "Product",
+        "SalesOrder",
+        "Customer"
+      ],
+      "target": [
+        "RiskEvent"
+      ],
+      "properties": [
+        {
+          "name": "score",
+          "type": "float",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "path",
+          "type": "string[]",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        },
+        {
+          "name": "rule",
+          "type": "string",
+          "description": "",
+          "required": false,
+          "enum": null,
+          "unit": null
+        }
+      ],
+      "inferred": true,
+      "inverse_name": null
+    }
+  ]
+}

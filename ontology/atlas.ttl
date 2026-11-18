@@ -1,0 +1,836 @@
+@prefix atlas: <https://atlas.dev/ontology/supply-chain#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://atlas.dev/ontology/supply-chain> a owl:Ontology ;
+    rdfs:label "Atlas Supply Chain Ontology" ;
+    rdfs:comment "Multi-tier supply network: organizations, facilities, items and bills of materials, logistics lanes through maritime chokepoints, commercial contracts and orders, tariffs, risk events and the documents that evidence them." ;
+    owl:versionInfo "1.0.0" .
+
+atlas:AFFECTS a owl:ObjectProperty ;
+    rdfs:label "AFFECTS" ;
+    rdfs:comment "Risk event impacts an entity." ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range atlas:Chokepoint,
+        atlas:Component,
+        atlas:Country,
+        atlas:Facility,
+        atlas:Material,
+        atlas:Organization,
+        atlas:Port,
+        atlas:Product,
+        atlas:ShippingLane .
+
+atlas:ALTERNATIVE_TO a owl:ObjectProperty ;
+    rdfs:label "ALTERNATIVE_TO" ;
+    rdfs:comment "Contingency lane that can replace another lane." ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range atlas:ShippingLane .
+
+atlas:COVERS a owl:ObjectProperty ;
+    rdfs:label "COVERS" ;
+    rdfs:comment "What a contract governs." ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range atlas:Component,
+        atlas:Material,
+        atlas:Product,
+        atlas:ShippingLane .
+
+atlas:DEPENDS_ON a owl:ObjectProperty ;
+    rdfs:label "DEPENDS_ON" ;
+    rdfs:comment "Inferred by the Atlas reasoning layer.",
+        "Product transitively depends on a supplier through its BOM." ;
+    rdfs:domain atlas:Product ;
+    rdfs:range atlas:Supplier .
+
+atlas:DESTINATION a owl:ObjectProperty ;
+    rdfs:label "DESTINATION" ;
+    rdfs:comment "Lane end port." ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range atlas:Port .
+
+atlas:EVIDENCES a owl:ObjectProperty ;
+    rdfs:label "EVIDENCES" ;
+    rdfs:comment "Document is the text of a contract." ;
+    rdfs:domain atlas:Document ;
+    rdfs:range atlas:Contract .
+
+atlas:EXPOSED_TO a owl:ObjectProperty ;
+    rdfs:label "EXPOSED_TO" ;
+    rdfs:comment "Entity is exposed to a risk event through some path.",
+        "Inferred by the Atlas reasoning layer." ;
+    rdfs:domain atlas:Customer,
+        atlas:Product,
+        atlas:SalesOrder,
+        atlas:Supplier ;
+    rdfs:range atlas:RiskEvent .
+
+atlas:FOR_PRODUCT a owl:ObjectProperty ;
+    rdfs:label "FOR_PRODUCT" ;
+    rdfs:comment "Order line product." ;
+    rdfs:domain atlas:SalesOrder ;
+    rdfs:range atlas:Product .
+
+atlas:FULFILLED_BY a owl:ObjectProperty ;
+    rdfs:label "FULFILLED_BY" ;
+    rdfs:comment "Factory that builds the order." ;
+    rdfs:domain atlas:SalesOrder ;
+    rdfs:range atlas:Factory .
+
+atlas:IMPOSED_BY a owl:ObjectProperty ;
+    rdfs:label "IMPOSED_BY" ;
+    rdfs:comment "Country levying the tariff." ;
+    rdfs:domain atlas:Tariff ;
+    rdfs:range atlas:Country .
+
+atlas:LOCATED_IN a owl:ObjectProperty ;
+    rdfs:label "LOCATED_IN" ;
+    rdfs:comment "Physical or legal location." ;
+    rdfs:domain atlas:Facility,
+        atlas:Organization,
+        atlas:Port ;
+    rdfs:range atlas:Country .
+
+atlas:MENTIONS a owl:ObjectProperty ;
+    rdfs:label "MENTIONS" ;
+    rdfs:comment "Document references an entity." ;
+    rdfs:domain atlas:Document ;
+    rdfs:range atlas:Chokepoint,
+        atlas:Component,
+        atlas:Contract,
+        atlas:Country,
+        atlas:Facility,
+        atlas:Material,
+        atlas:Organization,
+        atlas:Port,
+        atlas:Product,
+        atlas:RiskEvent,
+        atlas:ShippingLane .
+
+atlas:ON_ORIGIN a owl:ObjectProperty ;
+    rdfs:label "ON_ORIGIN" ;
+    rdfs:comment "Origin country targeted." ;
+    rdfs:domain atlas:Tariff ;
+    rdfs:range atlas:Country .
+
+atlas:OPERATED_BY a owl:ObjectProperty ;
+    rdfs:label "OPERATED_BY" ;
+    rdfs:comment "Carrier operating the lane." ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range atlas:LogisticsProvider .
+
+atlas:OPERATES a owl:ObjectProperty ;
+    rdfs:label "OPERATES" ;
+    rdfs:comment "Organization runs a facility." ;
+    rdfs:domain atlas:Organization ;
+    rdfs:range atlas:Facility .
+
+atlas:ORIGIN a owl:ObjectProperty ;
+    rdfs:label "ORIGIN" ;
+    rdfs:comment "Lane start port." ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range atlas:Port .
+
+atlas:PARTY_TO a owl:ObjectProperty ;
+    rdfs:label "PARTY_TO" ;
+    rdfs:comment "Organization signed a contract." ;
+    rdfs:domain atlas:Organization ;
+    rdfs:range atlas:Contract .
+
+atlas:PLACED a owl:ObjectProperty ;
+    rdfs:label "PLACED" ;
+    rdfs:comment "Customer placed an order." ;
+    rdfs:domain atlas:Customer ;
+    rdfs:range atlas:SalesOrder .
+
+atlas:PRODUCES a owl:ObjectProperty ;
+    rdfs:label "PRODUCES" ;
+    rdfs:comment "Factory manufactures an item." ;
+    rdfs:domain atlas:Factory ;
+    rdfs:range atlas:Component,
+        atlas:Product .
+
+atlas:QUALIFIED_FOR a owl:ObjectProperty ;
+    rdfs:label "QUALIFIED_FOR" ;
+    rdfs:comment "Supplier is qualified as an alternative source but not (fully) used." ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range atlas:Component,
+        atlas:Material .
+
+atlas:RECEIVES_AT a owl:ObjectProperty ;
+    rdfs:label "RECEIVES_AT" ;
+    rdfs:comment "Customer takes delivery at a port." ;
+    rdfs:domain atlas:Customer,
+        atlas:Facility ;
+    rdfs:range atlas:Port .
+
+atlas:REQUIRES a owl:ObjectProperty ;
+    rdfs:label "REQUIRES" ;
+    rdfs:comment "Bill of materials: an item is built from another item." ;
+    rdfs:domain atlas:Component,
+        atlas:Material,
+        atlas:Product ;
+    rdfs:range atlas:Component,
+        atlas:Material .
+
+atlas:ROUTED_THROUGH a owl:ObjectProperty ;
+    rdfs:label "ROUTED_THROUGH" ;
+    rdfs:comment "Inferred by the Atlas reasoning layer.",
+        "Supplier's inbound flow crosses a chokepoint." ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range atlas:Chokepoint .
+
+atlas:SERVED_BY a owl:ObjectProperty ;
+    rdfs:label "SERVED_BY" ;
+    rdfs:comment "Facility ships through a port." ;
+    rdfs:domain atlas:Facility ;
+    rdfs:range atlas:Port .
+
+atlas:SHIPS_VIA a owl:ObjectProperty ;
+    rdfs:label "SHIPS_VIA" ;
+    rdfs:comment "Default lane used to move goods from a supplier or factory." ;
+    rdfs:domain atlas:Factory,
+        atlas:Supplier ;
+    rdfs:range atlas:ShippingLane .
+
+atlas:SINGLE_SOURCE a owl:ObjectProperty ;
+    rdfs:label "SINGLE_SOURCE" ;
+    rdfs:comment "Inferred by the Atlas reasoning layer.",
+        "Item has exactly one active supplier and no qualified alternative." ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range atlas:Component,
+        atlas:Material .
+
+atlas:STOCKS a owl:ObjectProperty ;
+    rdfs:label "STOCKS" ;
+    rdfs:comment "Inventory position of an item at a facility." ;
+    rdfs:domain atlas:Facility ;
+    rdfs:range atlas:Component,
+        atlas:Material,
+        atlas:Product .
+
+atlas:SUPPLIES a owl:ObjectProperty ;
+    rdfs:label "SUPPLIES" ;
+    rdfs:comment "Supplier sells an item." ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range atlas:Component,
+        atlas:Material .
+
+atlas:SUPPLIES_TO a owl:ObjectProperty ;
+    rdfs:label "SUPPLIES_TO" ;
+    rdfs:comment "Commercial supply edge between organizations (builds the tier structure)." ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range atlas:Company,
+        atlas:Supplier .
+
+atlas:TARGETS a owl:ObjectProperty ;
+    rdfs:label "TARGETS" ;
+    rdfs:comment "Goods subject to the tariff." ;
+    rdfs:domain atlas:Tariff ;
+    rdfs:range atlas:Component,
+        atlas:Material,
+        atlas:Product .
+
+atlas:TRANSITS a owl:ObjectProperty ;
+    rdfs:label "TRANSITS" ;
+    rdfs:comment "Lane passes through a chokepoint." ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range atlas:Chokepoint .
+
+atlas:chokepoint_lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain atlas:Chokepoint ;
+    rdfs:range xsd:double .
+
+atlas:chokepoint_lon a owl:DatatypeProperty ;
+    rdfs:label "lon" ;
+    rdfs:domain atlas:Chokepoint ;
+    rdfs:range xsd:double .
+
+atlas:chokepoint_name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain atlas:Chokepoint ;
+    rdfs:range xsd:string .
+
+atlas:chokepoint_name_ar a owl:DatatypeProperty ;
+    rdfs:label "name_ar" ;
+    rdfs:domain atlas:Chokepoint ;
+    rdfs:range xsd:string .
+
+atlas:chokepoint_share_of_global_trade_pct a owl:DatatypeProperty ;
+    rdfs:label "share_of_global_trade_pct" ;
+    rdfs:domain atlas:Chokepoint ;
+    rdfs:range xsd:double .
+
+atlas:company_annual_revenue_usd a owl:DatatypeProperty ;
+    rdfs:label "annual_revenue_usd" ;
+    rdfs:domain atlas:Company ;
+    rdfs:range xsd:double .
+
+atlas:company_industry a owl:DatatypeProperty ;
+    rdfs:label "industry" ;
+    rdfs:domain atlas:Company ;
+    rdfs:range xsd:string .
+
+atlas:component_lead_time_days a owl:DatatypeProperty ;
+    rdfs:label "lead_time_days" ;
+    rdfs:domain atlas:Component ;
+    rdfs:range xsd:integer .
+
+atlas:contract_end_date a owl:DatatypeProperty ;
+    rdfs:label "end_date" ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range xsd:date .
+
+atlas:contract_exclusivity a owl:DatatypeProperty ;
+    rdfs:label "exclusivity" ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range xsd:boolean .
+
+atlas:contract_force_majeure a owl:DatatypeProperty ;
+    rdfs:label "force_majeure" ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range xsd:boolean .
+
+atlas:contract_kind a owl:DatatypeProperty ;
+    rdfs:label "kind" ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range xsd:string .
+
+atlas:contract_min_volume_units a owl:DatatypeProperty ;
+    rdfs:label "min_volume_units" ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range xsd:integer .
+
+atlas:contract_penalty_per_day_usd a owl:DatatypeProperty ;
+    rdfs:label "penalty_per_day_usd" ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range xsd:double .
+
+atlas:contract_start_date a owl:DatatypeProperty ;
+    rdfs:label "start_date" ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range xsd:date .
+
+atlas:contract_title a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range xsd:string .
+
+atlas:contract_value_usd a owl:DatatypeProperty ;
+    rdfs:label "value_usd" ;
+    rdfs:domain atlas:Contract ;
+    rdfs:range xsd:double .
+
+atlas:country_name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain atlas:Country ;
+    rdfs:range xsd:string .
+
+atlas:country_name_ar a owl:DatatypeProperty ;
+    rdfs:label "name_ar" ;
+    rdfs:domain atlas:Country ;
+    rdfs:range xsd:string .
+
+atlas:country_political_risk a owl:DatatypeProperty ;
+    rdfs:label "political_risk" ;
+    rdfs:comment "0-1, higher is riskier." ;
+    rdfs:domain atlas:Country ;
+    rdfs:range xsd:double .
+
+atlas:country_region a owl:DatatypeProperty ;
+    rdfs:label "region" ;
+    rdfs:domain atlas:Country ;
+    rdfs:range xsd:string .
+
+atlas:customer_region a owl:DatatypeProperty ;
+    rdfs:label "region" ;
+    rdfs:domain atlas:Customer ;
+    rdfs:range xsd:string .
+
+atlas:customer_segment a owl:DatatypeProperty ;
+    rdfs:label "segment" ;
+    rdfs:domain atlas:Customer ;
+    rdfs:range xsd:string .
+
+atlas:customer_strategic a owl:DatatypeProperty ;
+    rdfs:label "strategic" ;
+    rdfs:domain atlas:Customer ;
+    rdfs:range xsd:boolean .
+
+atlas:document_kind a owl:DatatypeProperty ;
+    rdfs:label "kind" ;
+    rdfs:domain atlas:Document ;
+    rdfs:range xsd:string .
+
+atlas:document_language a owl:DatatypeProperty ;
+    rdfs:label "language" ;
+    rdfs:domain atlas:Document ;
+    rdfs:range xsd:string .
+
+atlas:document_path a owl:DatatypeProperty ;
+    rdfs:label "path" ;
+    rdfs:comment "Relative path of the source file." ;
+    rdfs:domain atlas:Document ;
+    rdfs:range xsd:string .
+
+atlas:document_published_date a owl:DatatypeProperty ;
+    rdfs:label "published_date" ;
+    rdfs:domain atlas:Document ;
+    rdfs:range xsd:date .
+
+atlas:document_source a owl:DatatypeProperty ;
+    rdfs:label "source" ;
+    rdfs:domain atlas:Document ;
+    rdfs:range xsd:string .
+
+atlas:document_text a owl:DatatypeProperty ;
+    rdfs:label "text" ;
+    rdfs:domain atlas:Document ;
+    rdfs:range xsd:string .
+
+atlas:document_title a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:domain atlas:Document ;
+    rdfs:range xsd:string .
+
+atlas:facility_city a owl:DatatypeProperty ;
+    rdfs:label "city" ;
+    rdfs:domain atlas:Facility ;
+    rdfs:range xsd:string .
+
+atlas:facility_lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain atlas:Facility ;
+    rdfs:range xsd:double .
+
+atlas:facility_lon a owl:DatatypeProperty ;
+    rdfs:label "lon" ;
+    rdfs:domain atlas:Facility ;
+    rdfs:range xsd:double .
+
+atlas:facility_name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain atlas:Facility ;
+    rdfs:range xsd:string .
+
+atlas:factory_capacity_units_per_month a owl:DatatypeProperty ;
+    rdfs:label "capacity_units_per_month" ;
+    rdfs:domain atlas:Factory ;
+    rdfs:range xsd:integer .
+
+atlas:item_category a owl:DatatypeProperty ;
+    rdfs:label "category" ;
+    rdfs:domain atlas:Item ;
+    rdfs:range xsd:string .
+
+atlas:item_hs_code a owl:DatatypeProperty ;
+    rdfs:label "hs_code" ;
+    rdfs:comment "Harmonized System tariff code." ;
+    rdfs:domain atlas:Item ;
+    rdfs:range xsd:string .
+
+atlas:item_name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain atlas:Item ;
+    rdfs:range xsd:string .
+
+atlas:item_name_ar a owl:DatatypeProperty ;
+    rdfs:label "name_ar" ;
+    rdfs:domain atlas:Item ;
+    rdfs:range xsd:string .
+
+atlas:item_unit a owl:DatatypeProperty ;
+    rdfs:label "unit" ;
+    rdfs:comment "Unit of measure." ;
+    rdfs:domain atlas:Item ;
+    rdfs:range xsd:string .
+
+atlas:item_unit_cost_usd a owl:DatatypeProperty ;
+    rdfs:label "unit_cost_usd" ;
+    rdfs:domain atlas:Item ;
+    rdfs:range xsd:double .
+
+atlas:logisticsProvider_mode a owl:DatatypeProperty ;
+    rdfs:label "mode" ;
+    rdfs:domain atlas:LogisticsProvider ;
+    rdfs:range xsd:string .
+
+atlas:material_critical a owl:DatatypeProperty ;
+    rdfs:label "critical" ;
+    rdfs:comment "On a critical-minerals list." ;
+    rdfs:domain atlas:Material ;
+    rdfs:range xsd:boolean .
+
+atlas:organization_country_code a owl:DatatypeProperty ;
+    rdfs:label "country_code" ;
+    rdfs:comment "ISO 3166-1 alpha-2 of headquarters." ;
+    rdfs:domain atlas:Organization ;
+    rdfs:range xsd:string .
+
+atlas:organization_name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain atlas:Organization ;
+    rdfs:range xsd:string .
+
+atlas:organization_website a owl:DatatypeProperty ;
+    rdfs:label "website" ;
+    rdfs:domain atlas:Organization ;
+    rdfs:range xsd:string .
+
+atlas:port_congestion_index a owl:DatatypeProperty ;
+    rdfs:label "congestion_index" ;
+    rdfs:comment "0-1, higher is more congested." ;
+    rdfs:domain atlas:Port ;
+    rdfs:range xsd:double .
+
+atlas:port_kind a owl:DatatypeProperty ;
+    rdfs:label "kind" ;
+    rdfs:domain atlas:Port ;
+    rdfs:range xsd:string .
+
+atlas:port_lat a owl:DatatypeProperty ;
+    rdfs:label "lat" ;
+    rdfs:domain atlas:Port ;
+    rdfs:range xsd:double .
+
+atlas:port_lon a owl:DatatypeProperty ;
+    rdfs:label "lon" ;
+    rdfs:domain atlas:Port ;
+    rdfs:range xsd:double .
+
+atlas:port_name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain atlas:Port ;
+    rdfs:range xsd:string .
+
+atlas:port_name_ar a owl:DatatypeProperty ;
+    rdfs:label "name_ar" ;
+    rdfs:domain atlas:Port ;
+    rdfs:range xsd:string .
+
+atlas:product_family a owl:DatatypeProperty ;
+    rdfs:label "family" ;
+    rdfs:domain atlas:Product ;
+    rdfs:range xsd:string .
+
+atlas:product_gross_margin_pct a owl:DatatypeProperty ;
+    rdfs:label "gross_margin_pct" ;
+    rdfs:domain atlas:Product ;
+    rdfs:range xsd:double .
+
+atlas:product_sku a owl:DatatypeProperty ;
+    rdfs:label "sku" ;
+    rdfs:domain atlas:Product ;
+    rdfs:range xsd:string .
+
+atlas:product_unit_price_usd a owl:DatatypeProperty ;
+    rdfs:label "unit_price_usd" ;
+    rdfs:domain atlas:Product ;
+    rdfs:range xsd:double .
+
+atlas:riskEvent_expected_duration_days a owl:DatatypeProperty ;
+    rdfs:label "expected_duration_days" ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range xsd:integer .
+
+atlas:riskEvent_probability a owl:DatatypeProperty ;
+    rdfs:label "probability" ;
+    rdfs:comment "0-1 likelihood, 1 for ongoing events." ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range xsd:double .
+
+atlas:riskEvent_severity a owl:DatatypeProperty ;
+    rdfs:label "severity" ;
+    rdfs:comment "1 (minor) – 5 (critical)." ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range xsd:integer .
+
+atlas:riskEvent_start_date a owl:DatatypeProperty ;
+    rdfs:label "start_date" ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range xsd:date .
+
+atlas:riskEvent_status a owl:DatatypeProperty ;
+    rdfs:label "status" ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range xsd:string .
+
+atlas:riskEvent_summary a owl:DatatypeProperty ;
+    rdfs:label "summary" ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range xsd:string .
+
+atlas:riskEvent_title a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range xsd:string .
+
+atlas:riskEvent_title_ar a owl:DatatypeProperty ;
+    rdfs:label "title_ar" ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range xsd:string .
+
+atlas:riskEvent_type a owl:DatatypeProperty ;
+    rdfs:label "type" ;
+    rdfs:domain atlas:RiskEvent ;
+    rdfs:range xsd:string .
+
+atlas:salesOrder_due_date a owl:DatatypeProperty ;
+    rdfs:label "due_date" ;
+    rdfs:domain atlas:SalesOrder ;
+    rdfs:range xsd:date .
+
+atlas:salesOrder_order_date a owl:DatatypeProperty ;
+    rdfs:label "order_date" ;
+    rdfs:domain atlas:SalesOrder ;
+    rdfs:range xsd:date .
+
+atlas:salesOrder_priority a owl:DatatypeProperty ;
+    rdfs:label "priority" ;
+    rdfs:domain atlas:SalesOrder ;
+    rdfs:range xsd:string .
+
+atlas:salesOrder_quantity a owl:DatatypeProperty ;
+    rdfs:label "quantity" ;
+    rdfs:domain atlas:SalesOrder ;
+    rdfs:range xsd:integer .
+
+atlas:salesOrder_status a owl:DatatypeProperty ;
+    rdfs:label "status" ;
+    rdfs:domain atlas:SalesOrder ;
+    rdfs:range xsd:string .
+
+atlas:salesOrder_value_usd a owl:DatatypeProperty ;
+    rdfs:label "value_usd" ;
+    rdfs:domain atlas:SalesOrder ;
+    rdfs:range xsd:double .
+
+atlas:shippingLane_co2_kg_per_teu a owl:DatatypeProperty ;
+    rdfs:label "co2_kg_per_teu" ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range xsd:double .
+
+atlas:shippingLane_cost_per_teu_usd a owl:DatatypeProperty ;
+    rdfs:label "cost_per_teu_usd" ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range xsd:double .
+
+atlas:shippingLane_is_contingency a owl:DatatypeProperty ;
+    rdfs:label "is_contingency" ;
+    rdfs:comment "Backup route, not used by default." ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range xsd:boolean .
+
+atlas:shippingLane_mode a owl:DatatypeProperty ;
+    rdfs:label "mode" ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range xsd:string .
+
+atlas:shippingLane_name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range xsd:string .
+
+atlas:shippingLane_transit_days a owl:DatatypeProperty ;
+    rdfs:label "transit_days" ;
+    rdfs:domain atlas:ShippingLane ;
+    rdfs:range xsd:integer .
+
+atlas:supplier_category a owl:DatatypeProperty ;
+    rdfs:label "category" ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range xsd:string .
+
+atlas:supplier_esg_score a owl:DatatypeProperty ;
+    rdfs:label "esg_score" ;
+    rdfs:comment "0-100, higher is better." ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range xsd:double .
+
+atlas:supplier_financial_health a owl:DatatypeProperty ;
+    rdfs:label "financial_health" ;
+    rdfs:comment "Credit-style health rating." ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range xsd:string .
+
+atlas:supplier_on_time_delivery_pct a owl:DatatypeProperty ;
+    rdfs:label "on_time_delivery_pct" ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range xsd:double .
+
+atlas:supplier_tier a owl:DatatypeProperty ;
+    rdfs:label "tier" ;
+    rdfs:comment "1 = direct supplier." ;
+    rdfs:domain atlas:Supplier ;
+    rdfs:range xsd:integer .
+
+atlas:tariff_effective_date a owl:DatatypeProperty ;
+    rdfs:label "effective_date" ;
+    rdfs:domain atlas:Tariff ;
+    rdfs:range xsd:date .
+
+atlas:tariff_name a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:domain atlas:Tariff ;
+    rdfs:range xsd:string .
+
+atlas:tariff_rate_pct a owl:DatatypeProperty ;
+    rdfs:label "rate_pct" ;
+    rdfs:domain atlas:Tariff ;
+    rdfs:range xsd:double .
+
+atlas:tariff_status a owl:DatatypeProperty ;
+    rdfs:label "status" ;
+    rdfs:domain atlas:Tariff ;
+    rdfs:range xsd:string .
+
+atlas:warehouse_capacity_pallets a owl:DatatypeProperty ;
+    rdfs:label "capacity_pallets" ;
+    rdfs:domain atlas:Warehouse ;
+    rdfs:range xsd:integer .
+
+atlas:Warehouse a owl:Class ;
+    rdfs:label "مخزن"@ar,
+        "مستودع"@ar,
+        "Warehouse"@en ;
+    rdfs:comment "Stores inventory."@en ;
+    rdfs:subClassOf atlas:Facility .
+
+atlas:LogisticsProvider a owl:Class ;
+    rdfs:label "شركة شحن"@ar,
+        "ناقل"@ar,
+        "LogisticsProvider"@en ;
+    rdfs:comment "Carrier or freight forwarder operating shipping lanes."@en ;
+    rdfs:subClassOf atlas:Organization .
+
+atlas:Company a owl:Class ;
+    rdfs:label "الشركة"@ar,
+        "شركتنا"@ar,
+        "Company"@en ;
+    rdfs:comment "The focal company that owns this Atlas instance."@en ;
+    rdfs:subClassOf atlas:Organization .
+
+atlas:Factory a owl:Class ;
+    rdfs:label "المصنع"@ar,
+        "مصنع"@ar,
+        "Factory"@en ;
+    rdfs:comment "Manufactures components or products."@en ;
+    rdfs:subClassOf atlas:Facility .
+
+atlas:Customer a owl:Class ;
+    rdfs:label "العميل"@ar,
+        "عملاء"@ar,
+        "عميل"@ar,
+        "Customer"@en ;
+    rdfs:comment "Buys finished products."@en ;
+    rdfs:subClassOf atlas:Organization .
+
+atlas:Tariff a owl:Class ;
+    rdfs:label "تعريفة"@ar,
+        "جمارك"@ar,
+        "رسوم جمركية"@ar,
+        "Tariff"@en ;
+    rdfs:comment "Import duty imposed by a country on goods from an origin."@en .
+
+atlas:Chokepoint a owl:Class ;
+    rdfs:label "قناة"@ar,
+        "مضيق"@ar,
+        "ممر ملاحي"@ar,
+        "Chokepoint"@en ;
+    rdfs:comment "Maritime passage whose disruption forces rerouting."@en .
+
+atlas:Country a owl:Class ;
+    rdfs:label "بلد"@ar,
+        "دولة"@ar,
+        "Country"@en ;
+    rdfs:comment "Sovereign country; key is ISO 3166-1 alpha-2."@en .
+
+atlas:Document a owl:Class ;
+    rdfs:label "تقرير"@ar,
+        "خبر"@ar,
+        "مستند"@ar,
+        "Document"@en ;
+    rdfs:comment "Unstructured source (news, contract text, report) linked to graph entities."@en .
+
+atlas:Item a owl:Class ;
+    rdfs:label "Item"@en ;
+    rdfs:comment "Anything that can be bought, made, stocked or sold."@en .
+
+atlas:SalesOrder a owl:Class ;
+    rdfs:label "أمر بيع"@ar,
+        "طلب"@ar,
+        "طلبية"@ar,
+        "SalesOrder"@en ;
+    rdfs:comment "Customer order for a product."@en .
+
+atlas:Material a owl:Class ;
+    rdfs:label "مادة خام"@ar,
+        "مواد خام"@ar,
+        "Material"@en ;
+    rdfs:comment "Raw or processed material (e.g. lithium carbonate, copper)."@en ;
+    rdfs:subClassOf atlas:Item .
+
+atlas:Component a owl:Class ;
+    rdfs:label "قطعة"@ar,
+        "مكون"@ar,
+        "مكونات"@ar,
+        "Component"@en ;
+    rdfs:comment "Purchased part that goes into a product."@en ;
+    rdfs:subClassOf atlas:Item .
+
+atlas:Organization a owl:Class ;
+    rdfs:label "شركة"@ar,
+        "منظمة"@ar,
+        "Organization"@en ;
+    rdfs:comment "Any legal entity participating in the supply network."@en .
+
+atlas:RiskEvent a owl:Class ;
+    rdfs:label "أزمة"@ar,
+        "اضطراب"@ar,
+        "خطر"@ar,
+        "مخاطر"@ar,
+        "RiskEvent"@en ;
+    rdfs:comment "Real-world event that can disrupt supply, logistics or demand."@en .
+
+atlas:Contract a owl:Class ;
+    rdfs:label "اتفاقية"@ar,
+        "عقد"@ar,
+        "عقود"@ar,
+        "Contract"@en ;
+    rdfs:comment "Commercial agreement with a supplier, customer or carrier."@en .
+
+atlas:Facility a owl:Class ;
+    rdfs:label "منشأة"@ar,
+        "موقع"@ar,
+        "Facility"@en ;
+    rdfs:comment "A physical site."@en .
+
+atlas:Port a owl:Class ;
+    rdfs:label "الميناء"@ar,
+        "ميناء"@ar,
+        "Port"@en ;
+    rdfs:comment "Sea or air port; key is UN/LOCODE."@en .
+
+atlas:Product a owl:Class ;
+    rdfs:label "منتج"@ar,
+        "منتجات"@ar,
+        "Product"@en ;
+    rdfs:comment "Finished good sold to customers."@en ;
+    rdfs:subClassOf atlas:Item .
+
+atlas:Supplier a owl:Class ;
+    rdfs:label "المورد"@ar,
+        "مورد"@ar,
+        "موردين"@ar,
+        "Supplier"@en ;
+    rdfs:comment "Provides materials or components, directly (tier 1) or indirectly (tier 2+)."@en ;
+    rdfs:subClassOf atlas:Organization .
+
+atlas:ShippingLane a owl:Class ;
+    rdfs:label "خط شحن"@ar,
+        "مسار"@ar,
+        "ShippingLane"@en ;
+    rdfs:comment "A recurring origin→destination route with a mode and transit time."@en .
+

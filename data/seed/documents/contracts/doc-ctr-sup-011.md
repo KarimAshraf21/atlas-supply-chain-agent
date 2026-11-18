@@ -1,0 +1,36 @@
+---
+id: "DOC-CTR-SUP-011"
+title: "Master Supply Agreement — Delta Electric Transformers"
+kind: "contract"
+language: "en"
+published: "2024-09-19"
+source: "Nilewave Legal"
+mentions: ["SUP-DELTAMV", "CMP-TRAFO"]
+---
+# Master Supply Agreement — Delta Electric Transformers
+
+**Contract ID:** CTR-SUP-011
+**Buyer:** Nilewave Energy
+**Seller:** Delta Electric Transformers
+**Term:** 2024-09-19 to 2026-09-19
+**Estimated value:** USD 21,234,628,000
+
+## 1. Scope
+The Seller shall supply the following: Medium-voltage transformer 2.5 MVA.
+
+## 2. Delivery
+Deliveries are made DAP at the Buyer's nominated site. Lead times are confirmed per purchase order; the Seller
+shall notify the Buyer of any expected delay of more than three (3) days.
+
+## 3. Liquidated damages
+For each day of late delivery the Seller shall pay liquidated damages of USD 8,493,850,
+capped at ten percent (10%) of the annual contract value.
+
+## 5. Force majeure
+Neither party shall be liable for delay or failure to perform caused by events beyond its reasonable control, including war, armed conflict, acts of terrorism, blockade, closure of international shipping routes, epidemic, natural disaster or governmental action, provided that the affected party notifies the other within five (5) business days and uses commercially reasonable efforts to mitigate.
+
+## 6. Minimum volumes
+The Buyer commits to a minimum of 42,000 units per year.
+
+## 7. Governing law
+This Agreement is governed by the laws of England and Wales. Disputes are settled by arbitration in London (LCIA).

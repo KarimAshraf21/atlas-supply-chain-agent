@@ -1,0 +1,12 @@
+id,sku,name,name_ar,category,family,unit,unit_price_usd,gross_margin_pct,unit_cost_usd
+PRD-INV5,NW-INV-5K,Helio 5 kW Hybrid Inverter,عاكس هجين 5 كيلوواط,Inverters,Inverters,pcs,1150.0,31.0,394.9
+PRD-INV10,NW-INV-10K,Helio 10 kW Hybrid Inverter,عاكس هجين 10 كيلوواط,Inverters,Inverters,pcs,1890.0,33.0,501.4
+PRD-INV100,NW-INV-100K,Helio Pro 100 kW String Inverter,عاكس تجاري 100 كيلوواط,Inverters,Inverters,pcs,7400.0,29.0,2074.2
+PRD-HB10,NW-HB-10,Oasis 10 kWh Home Battery,بطارية منزلية 10 كيلوواط ساعة,Home Storage,Home Storage,pcs,3900.0,27.0,638.0
+PRD-HB15,NW-HB-15,Oasis 15 kWh Home Battery,بطارية منزلية 15 كيلوواط ساعة,Home Storage,Home Storage,pcs,5400.0,28.0,884.0
+PRD-GRID25,NW-GRID-2.5,Pharos 2.5 MWh Grid Battery Container,حاوية تخزين شبكي 2.5 ميغاواط ساعة,Grid Storage,Grid Storage,pcs,610000.0,22.0,195016.0
+PRD-GRID5,NW-GRID-5,Pharos 5 MWh Grid Battery Container,حاوية تخزين شبكي 5 ميغاواط ساعة,Grid Storage,Grid Storage,pcs,1150000.0,24.0,389976.0
+PRD-EVC22,NW-EVC-22,Volta 22 kW AC Charger,شاحن سيارات 22 كيلوواط,EV Charging,EV Charging,pcs,890.0,35.0,142.5
+PRD-EVC150,NW-EVC-150,Volta 150 kW DC Fast Charger,شاحن سريع 150 كيلوواط,EV Charging,EV Charging,pcs,38500.0,30.0,2988.4
+PRD-MGC,NW-MGC,Delta Microgrid Controller,وحدة تحكم الشبكة المصغرة,Controls,Controls,pcs,4200.0,45.0,161.0
+PRD-SOLKIT,NW-SOL-KIT,Sahara 8 kW Residential Solar Kit,مجموعة طاقة شمسية منزلية 8 كيلوواط,Solar Kits,Solar Kits,pcs,6900.0,21.0,1128.0

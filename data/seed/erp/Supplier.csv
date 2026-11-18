@@ -1,0 +1,50 @@
+id,name,country_code,tier,category,esg_score,financial_health,on_time_delivery_pct,website
+SUP-ZHENGYUAN,Zhengyuan Cell Technology,CN,1,Battery cells,58.0,stable,93.5,https://zhengyuan.example
+SUP-MEKONG,Mekong Power Cells,VN,1,Battery cells,66.0,stable,89.0,https://mekong.example
+SUP-HANSEONG,Hanseong Energy Solution,KR,1,Battery cells,81.0,strong,97.2,https://hanseong.example
+SUP-FORMOSIC,FormoSiC Semiconductor,TW,1,Semiconductors,74.0,strong,95.1,https://formosic.example
+SUP-TAMSUI,Tamsui Microelectronics,TW,1,Semiconductors,77.0,strong,96.4,https://tamsui.example
+SUP-PENANG,Penang Semicon Assembly,MY,1,Semiconductors,70.0,stable,92.0,https://penang.example
+SUP-KYOEI,Kyoei Power Devices,JP,1,Semiconductors,85.0,strong,98.0,https://kyoei.example
+SUP-RHEINHALB,Rheinhalb Halbleiter,DE,1,Semiconductors,88.0,strong,96.8,https://rheinhalb.example
+SUP-XIAMEN,Xiamen Faradic Components,CN,1,Passives,55.0,stable,91.0,https://xiamen.example
+SUP-ANATOLIA,Anatolia Elektronik,TR,1,Passives,69.0,stable,90.5,https://anatolia.example
+SUP-SHENGHUA,Shenghua Magnetics,CN,1,Magnetics,52.0,watch,86.0,https://shenghua.example
+SUP-DELTAMV,Delta Electric Transformers,EG,1,Magnetics,63.0,stable,88.5,https://deltamv.example
+SUP-BOSPHORUS,Bosphorus Trafo,TR,1,Magnetics,71.0,stable,91.5,https://bosphorus.example
+SUP-NILEMICRO,Nile Microsystems,EG,1,Electronics,75.0,stable,94.0,https://nilemicro.example
+SUP-PEARL,Pearl River EMS,CN,1,Electronics,60.0,stable,92.5,https://pearl.example
+SUP-GYEONGGI,Gyeonggi Display,KR,1,Electronics,79.0,strong,95.5,https://gyeonggi.example
+SUP-ALEXCAST,Alexandria Die-Casting,EG,1,Mechanical,62.0,stable,90.0,https://alexcast.example
+SUP-KONYA,Konya Metal Döküm,TR,1,Mechanical,64.0,stable,89.0,https://konya.example
+SUP-DELTACU,Delta Copper Works,EG,1,Mechanical,59.0,stable,91.0,https://deltacu.example
+SUP-BOXWORKS,Qingdao BoxWorks,CN,1,Mechanical,54.0,stable,90.0,https://boxworks.example
+SUP-HEJAZ,Hejaz Steel Structures,SA,1,Mechanical,67.0,strong,93.0,https://hejaz.example
+SUP-GULFCOOL,Gulf Thermal Systems,AE,1,Thermal,72.0,stable,92.0,https://gulfcool.example
+SUP-FLAMEX,Flamex Safety Systems,IT,1,Safety,83.0,strong,97.0,https://flamex.example
+SUP-WESER,Weser Schaltgeräte,DE,1,Electromechanical,86.0,strong,96.0,https://weser.example
+SUP-SILESIA,Silesia E-Mobility Cables,PL,1,Electromechanical,78.0,stable,94.5,https://silesia.example
+SUP-DETROIT,Détroit Câblage,MA,1,Electromechanical,70.0,stable,93.0,https://detroit.example
+SUP-TIANSHAN,Tianshan Solar,CN,1,Solar,41.0,stable,92.0,https://tianshan.example
+SUP-SURYA,Surya Photon,IN,1,Solar,68.0,stable,88.0,https://surya.example
+SUP-XIANGJIANG,Xiangjiang Cathode Materials,CN,2,Battery materials,47.0,stable,91.0,https://xiangjiang.example
+SUP-ULSAN,Ulsan Advanced Materials,KR,2,Battery materials,80.0,strong,96.0,https://ulsan.example
+SUP-HEILONG,Heilong Graphite,CN,2,Critical minerals,38.0,stable,90.0,https://heilong.example
+SUP-BALAMA,Balama Graphite Processing,MZ,2,Critical minerals,52.0,watch,81.0,https://balama.example
+SUP-JIANGSU,Jiangsu Ionic Chemicals,CN,2,Battery materials,50.0,stable,92.0,https://jiangsu.example
+SUP-EHIME,Ehime Membrane Industries,JP,2,Battery materials,87.0,strong,98.5,https://ehime.example
+SUP-DAEGU,Daegu Copper Foil,KR,2,Metals,61.0,distressed,78.0,https://daegu.example
+SUP-HSINCHUWAFER,Hsinchu Wafer Works,TW,2,Semiconductor materials,79.0,strong,97.0,https://hsinchuwafer.example
+SUP-KYUSHU,Kyushu Silicon,JP,2,Semiconductor materials,84.0,strong,98.0,https://kyushu.example
+SUP-CAROLINASIC,Carolina SiC Materials,US,2,Semiconductor materials,82.0,strong,95.0,https://carolinasic.example
+SUP-SHANDONGSIC,Shandong SiC Crystal,CN,2,Semiconductor materials,56.0,stable,90.0,https://shandongsic.example
+SUP-YUNNANGA,Yunnan Gallium Refinery,CN,2,Critical minerals,44.0,stable,93.0,https://yunnanga.example
+SUP-KHALIFAAL,Khalifa Aluminium Smelting,AE,2,Metals,70.0,strong,96.0,https://khalifaal.example
+SUP-ATACAMACU,Atacama Copper,CL,2,Metals,63.0,stable,91.0,https://atacamacu.example
+SUP-SUEZSTEEL,Suez Steel Mills,EG,2,Metals,57.0,stable,90.0,https://suezsteel.example
+SUP-HEBEISTEEL,Hebei Coastal Steel,CN,2,Metals,35.0,watch,88.0,https://hebeisteel.example
+SUP-JUNGGAR,Junggar Polysilicon,CN,2,Semiconductor materials,22.0,stable,94.0,https://junggar.example
+SUP-BAOTOUMAG,Baotou Magnetics,CN,2,Critical minerals,39.0,stable,92.0,https://baotoumag.example
+SUP-SALARLI,Salar Lithium,CL,3,Critical minerals,58.0,stable,92.0,https://salarli.example
+SUP-SICHUANLI,Sichuan Lithium Refining,CN,3,Critical minerals,46.0,stable,91.0,https://sichuanli.example
+SUP-GOLDFIELDS,Goldfields Spodumene,AU,3,Critical minerals,71.0,watch,90.0,https://goldfields.example

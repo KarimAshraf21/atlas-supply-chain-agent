@@ -1,0 +1,6 @@
+id,name,rate_pct,effective_date,status
+TAR-US-EG,US reciprocal tariff on Egyptian goods,10.0,2025-04-05,in_force
+TAR-US-MA,US reciprocal tariff on Moroccan goods,10.0,2025-04-05,in_force
+TAR-US-FEOC,US duty on storage systems with Chinese-made cells,25.0,2027-01-01,proposed
+TAR-EU-CBAM,EU CBAM levy on embedded steel & aluminium,4.0,2026-01-01,in_force
+TAR-ZA-INV,South Africa import duty on inverters,15.0,2026-12-01,announced

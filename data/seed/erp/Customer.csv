@@ -1,0 +1,31 @@
+id,name,country_code,segment,region,strategic,website
+CUS-ELBTAL,Elbtal Stadtwerke,DE,utility,Europe,True,https://elbtal.example
+CUS-SOLARHAUS,Solarhaus Großhandel,DE,distributor,Europe,False,https://solarhaus.example
+CUS-AUTOBAHN,Autobahn Laden,DE,oem,Europe,True,https://autobahn.example
+CUS-POLDER,Polder Energie,NL,distributor,Europe,True,https://polder.example
+CUS-ZONNEKRACHT,Zonnekracht Installaties,NL,installer,Europe,False,https://zonnekracht.example
+CUS-IBERIASOL,Iberia Sol Distribución,ES,distributor,Europe,False,https://iberiasol.example
+CUS-LEVANTE,Levante Renovables,ES,utility,Europe,True,https://levante.example
+CUS-SOLEALPINO,Sole Alpino Energia,IT,distributor,Europe,False,https://solealpino.example
+CUS-WALLONIE,Wallonie Stockage,BE,utility,Europe,False,https://wallonie.example
+CUS-CHARGEFR,Charge de France Réseau,FR,oem,Europe,False,https://chargefr.example
+CUS-BALTYK,Bałtyk Grid Services,PL,utility,Europe,False,https://baltyk.example
+CUS-ANATOLIA,Anatolia Şebeke Hizmetleri,TR,utility,Europe,False,https://anatolia.example
+CUS-NAJD,Najd Renewable Power,SA,utility,MENA,True,https://najd.example
+CUS-REDSEACOAST,Red Sea Coast Developments,SA,utility,MENA,True,https://redseacoast.example
+CUS-HEJAZSOLAR,Hejaz Solar Distribution,SA,distributor,MENA,False,https://hejazsolar.example
+CUS-EMIRATESGRID,Emirates Smart Grid Services,AE,utility,MENA,True,https://emiratesgrid.example
+CUS-FALCONEV,Falcon EV Networks,AE,distributor,MENA,False,https://falconev.example
+CUS-DUBAIROOF,Dubai Rooftop Installers,AE,installer,MENA,False,https://dubairoof.example
+CUS-DELTAGRID,Delta Grid Company,EG,utility,MENA,True,https://deltagrid.example
+CUS-MISRSOLAR,Misr Solar Installations,EG,installer,MENA,False,https://misrsolar.example
+CUS-MAGHREB,Maghreb Énergie Verte,MA,distributor,MENA,False,https://maghreb.example
+CUS-KILIMANJARO,Kilimanjaro Off-Grid,KE,distributor,Africa,False,https://kilimanjaro.example
+CUS-SAVANNA,Savanna Mini-Grids,KE,utility,Africa,True,https://savanna.example
+CUS-LAGOSPOWER,Lagos Power Retail,NG,retail,Africa,False,https://lagospower.example
+CUS-HIGHVELD,Highveld Storage Solutions,ZA,distributor,Africa,True,https://highveld.example
+CUS-KAROO,Karoo Solar Wholesale,ZA,distributor,Africa,False,https://karoo.example
+CUS-LONESTAR,Lone Star Storage Partners,US,utility,North America,True,https://lonestar.example
+CUS-BAYOU,Bayou Solar Supply,US,distributor,North America,False,https://bayou.example
+CUS-GULFCOASTEV,Gulf Coast EV Charging,US,oem,North America,False,https://gulfcoastev.example
+CUS-DECCAN,Deccan Rooftop Energy,IN,installer,South Asia,False,https://deccan.example

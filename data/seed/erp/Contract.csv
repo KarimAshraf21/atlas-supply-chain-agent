@@ -1,0 +1,41 @@
+id,title,kind,start_date,end_date,value_usd,penalty_per_day_usd,force_majeure,exclusivity,min_volume_units
+CTR-SUP-001,Master Supply Agreement — Zhengyuan Cell Technology,supply,2024-08-03,2026-12-31,17521000.0,7010.0,True,False,25000
+CTR-SUP-002,Master Supply Agreement — Mekong Power Cells,supply,2024-04-14,2026-04-14,17611000.0,7040.0,True,False,46000
+CTR-SUP-003,Master Supply Agreement — FormoSiC Semiconductor,supply,2024-08-09,2027-01-31,55095000.0,22040.0,True,True,48000
+CTR-SUP-004,Master Supply Agreement — Tamsui Microelectronics,supply,2025-05-15,2028-05-14,3513000.0,1410.0,True,True,8000
+CTR-SUP-005,Master Supply Agreement — Penang Semicon Assembly,supply,2024-10-01,2026-10-01,23961000.0,9580.0,True,True,34000
+CTR-SUP-006,Master Supply Agreement — Kyoei Power Devices,supply,2024-12-20,2026-12-20,7808000.0,3120.0,True,False,13000
+CTR-SUP-007,Master Supply Agreement — Rheinhalb Halbleiter,supply,2024-03-01,2027-03-01,12432000.0,4970.0,True,False,5000
+CTR-SUP-008,Master Supply Agreement — Xiamen Faradic Components,supply,2024-05-27,2027-05-27,9940000.0,3980.0,True,False,12000
+CTR-SUP-009,Master Supply Agreement — Anatolia Elektronik,supply,2024-11-04,2026-11-04,2137000.0,850.0,True,False,14000
+CTR-SUP-010,Master Supply Agreement — Shenghua Magnetics,supply,2025-02-23,2028-02-23,7058000.0,2820.0,True,True,33000
+CTR-SUP-011,Master Supply Agreement — Delta Electric Transformers,supply,2024-09-19,2026-09-19,21234628000.0,8493850.0,True,False,42000
+CTR-SUP-012,Master Supply Agreement — Bosphorus Trafo,supply,2024-05-07,2027-05-07,22362609000.0,8945040.0,True,False,28000
+CTR-SUP-013,Master Supply Agreement — Nile Microsystems,supply,2025-08-07,2027-08-07,35306000.0,14120.0,True,False,11000
+CTR-SUP-014,Master Supply Agreement — Pearl River EMS,supply,2024-10-29,2027-10-29,10778000.0,4310.0,True,True,35000
+CTR-SUP-015,Master Supply Agreement — Gyeonggi Display,supply,2025-03-26,2028-03-25,13606000.0,5440.0,True,False,59000
+CTR-SUP-016,Master Supply Agreement — Alexandria Die-Casting,supply,2025-02-03,2028-02-03,3141000.0,1260.0,True,False,56000
+CTR-SUP-017,Master Supply Agreement — Konya Metal Döküm,supply,2025-03-27,2028-03-26,8177000.0,3270.0,True,False,50000
+CTR-SUP-018,Master Supply Agreement — Delta Copper Works,supply,2024-09-17,2027-09-17,4695000.0,1880.0,True,True,46000
+CTR-SUP-019,Master Supply Agreement — Qingdao BoxWorks,supply,2025-08-03,2027-08-03,2385234000.0,954090.0,True,True,41000
+CTR-SUP-020,Master Supply Agreement — Gulf Thermal Systems,supply,2025-02-21,2027-02-21,1379199000.0,551680.0,True,True,20000
+CTR-SUP-021,Master Supply Agreement — Flamex Safety Systems,supply,2025-07-10,2027-07-10,1931321000.0,772530.0,True,True,35000
+CTR-SUP-022,Master Supply Agreement — Weser Schaltgeräte,supply,2024-06-29,2026-06-29,10579000.0,4230.0,True,False,47000
+CTR-SUP-023,Master Supply Agreement — Silesia E-Mobility Cables,supply,2025-08-16,2027-08-16,43301000.0,17320.0,True,True,11000
+CTR-SUP-024,Master Supply Agreement — Détroit Câblage,supply,2024-07-14,2027-07-14,1312000.0,520.0,True,True,28000
+CTR-SUP-025,Master Supply Agreement — Tianshan Solar,supply,2024-03-24,2027-03-24,22477000.0,8990.0,True,False,51000
+CTR-SUP-026,Master Supply Agreement — Surya Photon,supply,2024-03-10,2026-03-10,39450000.0,15780.0,True,False,53000
+CTR-SAL-027,Framework Supply & Delivery Agreement — Elbtal Stadtwerke,sales,2025-07-19,2028-07-18,47582000.0,23800.0,True,False,
+CTR-SAL-028,Framework Supply & Delivery Agreement — Autobahn Laden,sales,2025-07-22,2028-07-21,5159000.0,2600.0,True,False,
+CTR-SAL-029,Framework Supply & Delivery Agreement — Polder Energie,sales,2025-07-03,2028-07-02,9392000.0,4700.0,True,False,
+CTR-SAL-030,Framework Supply & Delivery Agreement — Levante Renovables,sales,2025-09-17,2028-09-16,32937000.0,16500.0,True,False,
+CTR-SAL-031,Framework Supply & Delivery Agreement — Najd Renewable Power,sales,2025-08-30,2028-08-29,20228000.0,10100.0,True,False,
+CTR-SAL-032,Framework Supply & Delivery Agreement — Red Sea Coast Developments,sales,2025-10-07,2028-10-06,32063000.0,16000.0,False,False,
+CTR-SAL-033,Framework Supply & Delivery Agreement — Emirates Smart Grid Services,sales,2026-01-27,2029-01-26,22615000.0,11300.0,True,False,
+CTR-SAL-034,Framework Supply & Delivery Agreement — Delta Grid Company,sales,2025-03-15,2028-03-14,29047000.0,14500.0,True,False,
+CTR-SAL-035,Framework Supply & Delivery Agreement — Savanna Mini-Grids,sales,2025-01-05,2028-01-05,56318000.0,28200.0,True,False,
+CTR-SAL-036,Framework Supply & Delivery Agreement — Highveld Storage Solutions,sales,2025-06-13,2028-06-12,17672000.0,8800.0,True,False,
+CTR-SAL-037,Framework Supply & Delivery Agreement — Lone Star Storage Partners,sales,2025-01-20,2028-01-20,115982000.0,58000.0,False,False,
+CTR-LOG-038,Ocean Freight Agreement — Orient Star Container Line,logistics,2026-01-01,2026-12-31,16794000.0,0.0,True,False,
+CTR-LOG-039,Ocean Freight Agreement — Levant Ocean Lines,logistics,2026-01-01,2026-12-31,9819000.0,0.0,True,False,
+CTR-LOG-040,Ocean Freight Agreement — Cape Express Shipping,logistics,2026-01-01,2026-12-31,8802000.0,0.0,True,False,

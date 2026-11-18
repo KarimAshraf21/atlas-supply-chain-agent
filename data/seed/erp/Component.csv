@@ -1,0 +1,23 @@
+id,name,name_ar,category,hs_code,unit,unit_cost_usd,lead_time_days
+CMP-LFPCELL,LFP prismatic cell 280 Ah,خلية ليثيوم فوسفات الحديد,Battery cells,850650,pcs,38.0,75
+CMP-BMS,Battery management system board,لوحة إدارة البطارية,Electronics,853710,pcs,64.0,45
+CMP-SICMOS,SiC MOSFET power module 1200 V,وحدة قدرة كربيد السيليكون,Semiconductors,854129,pcs,118.0,120
+CMP-IGBT,IGBT module 650 V,وحدة IGBT,Semiconductors,854129,pcs,42.0,90
+CMP-MCU,32-bit automotive-grade MCU,متحكم دقيق 32 بت,Semiconductors,854231,pcs,6.5,110
+CMP-DSP,Digital signal processor for power control,معالج إشارات رقمية,Semiconductors,854231,pcs,14.0,120
+CMP-GATEDRV,Isolated gate driver IC,دائرة تشغيل البوابة,Semiconductors,854239,pcs,3.2,80
+CMP-FILMCAP,DC-link film capacitor,مكثف فيلم,Passives,853225,pcs,9.8,60
+CMP-INDUCTOR,High-current power inductor,ملف حث عالي التيار,Magnetics,850450,pcs,12.5,55
+CMP-TRAFO,Medium-voltage transformer 2.5 MVA,محول جهد متوسط,Magnetics,850423,pcs,48000.0,180
+CMP-PCBA,Control PCB assembly,لوحة دوائر التحكم,Electronics,853890,pcs,28.0,40
+CMP-COMMS,4G/Wi-Fi connectivity module,وحدة اتصال,Electronics,851762,pcs,11.0,50
+CMP-DISPLAY,7-inch industrial touch display,شاشة لمس صناعية,Electronics,852859,pcs,34.0,45
+CMP-ENCL,Die-cast aluminium enclosure,غلاف ألومنيوم,Mechanical,761699,pcs,22.0,35
+CMP-BUSBAR,Copper busbar set,قضبان نحاسية,Mechanical,740721,set,18.0,30
+CMP-CONTAINER,20-ft battery container shell,هيكل حاوية البطارية,Mechanical,860900,pcs,14500.0,60
+CMP-HVAC,Container liquid-cooling & HVAC unit,وحدة التبريد السائل,Thermal,841582,pcs,9800.0,70
+CMP-FIRE,Aerosol fire-suppression system,نظام إطفاء الحريق,Safety,842410,pcs,4200.0,50
+CMP-CONTACTOR,DC contactor 1000 V,قاطع تيار مستمر,Electromechanical,853649,pcs,26.0,50
+CMP-CCS2,CCS2 charging cable & connector,كابل شحن CCS2,Electromechanical,854442,pcs,160.0,45
+CMP-PVPANEL,550 W mono PERC solar panel,لوح شمسي 550 واط,Solar,854143,pcs,72.0,60
+CMP-HARNESS,Wiring harness,حزمة أسلاك,Electromechanical,854430,set,15.0,30

@@ -1,0 +1,138 @@
+id,name,mode,transit_days,cost_per_teu_usd,co2_kg_per_teu,is_contingency
+LANE-CNNGB-EGSOK-SEA,Ningbo-Zhoushan → Ain Sokhna (sea),sea,21,2690.0,783.8,False
+LANE-CNNGB-EGPSD-ALT,"Ningbo-Zhoushan → Port Said East (sea, contingency)",sea,43,5470.0,1659.0,True
+LANE-VNSGN-EGSOK-SEA,Ho Chi Minh City (Cat Lai) → Ain Sokhna (sea),sea,19,2490.0,708.7,False
+LANE-VNSGN-EGPSD-ALT,"Ho Chi Minh City (Cat Lai) → Port Said East (sea, contingency)",sea,42,5270.0,1583.9,True
+LANE-TWKHH-MAPTM-SEA,Kaohsiung → Tanger Med (sea),sea,25,3100.0,939.4,False
+LANE-TWKHH-MAPTM-ALT,"Kaohsiung → Tanger Med (sea, contingency)",sea,35,4730.0,1380.8,True
+LANE-TWKHH-MAPTM-AIR,"Kaohsiung → Tanger Med (air, contingency)",air,3,48000.0,9800.0,True
+LANE-TWKHH-EGPSD-SEA,Kaohsiung → Port Said East (sea),sea,23,2860.0,849.3,False
+LANE-TWKHH-EGPSD-ALT,"Kaohsiung → Port Said East (sea, contingency)",sea,44,5300.0,1593.5,True
+LANE-TWKHH-EGPSD-AIR,"Kaohsiung → Port Said East (air, contingency)",air,3,48000.0,9800.0,True
+LANE-TWKHH-EGSOK-SEA,Kaohsiung → Ain Sokhna (sea),sea,20,2520.0,718.4,False
+LANE-TWKHH-EGSOK-AIR,"Kaohsiung → Ain Sokhna (air, contingency)",air,3,48000.0,9800.0,True
+LANE-MYPKG-EGPSD-SEA,Port Klang → Port Said East (sea),sea,19,2430.0,686.0,False
+LANE-MYPKG-EGPSD-ALT,"Port Klang → Port Said East (sea, contingency)",sea,38,4860.0,1430.1,True
+LANE-MYPKG-EGPSD-AIR,"Port Klang → Port Said East (air, contingency)",air,3,48000.0,9800.0,True
+LANE-MYPKG-MAPTM-SEA,Port Klang → Tanger Med (sea),sea,21,2670.0,776.0,False
+LANE-MYPKG-MAPTM-ALT,"Port Klang → Tanger Med (sea, contingency)",sea,31,4300.0,1217.5,True
+LANE-MYPKG-MAPTM-AIR,"Port Klang → Tanger Med (air, contingency)",air,3,48000.0,9800.0,True
+LANE-MYPKG-EGSOK-SEA,Port Klang → Ain Sokhna (sea),sea,16,2080.0,555.0,False
+LANE-MYPKG-EGSOK-AIR,"Port Klang → Ain Sokhna (air, contingency)",air,3,48000.0,9800.0,True
+LANE-JPYOK-EGPSD-SEA,Yokohama → Port Said East (sea),sea,26,3260.0,997.3,False
+LANE-JPYOK-EGPSD-ALT,"Yokohama → Port Said East (sea, contingency)",sea,43,5690.0,1741.4,True
+LANE-JPYOK-EGPSD-AIR,"Yokohama → Port Said East (air, contingency)",air,3,48000.0,9800.0,True
+LANE-DEHAM-EGPSD-SEA,Hamburg → Port Said East (sea),sea,12,1680.0,406.0,False
+LANE-DEHAM-EGPSD-AIR,"Hamburg → Port Said East (air, contingency)",air,3,48000.0,9800.0,True
+LANE-CNSZX-EGPSD-SEA,Shenzhen Yantian → Port Said East (sea),sea,22,2830.0,835.5,False
+LANE-CNSZX-EGPSD-ALT,"Shenzhen Yantian → Port Said East (sea, contingency)",sea,46,5260.0,1579.6,True
+LANE-CNSZX-MAPTM-SEA,Shenzhen Yantian → Tanger Med (sea),sea,24,3070.0,925.5,False
+LANE-CNSZX-MAPTM-ALT,"Shenzhen Yantian → Tanger Med (sea, contingency)",sea,35,4700.0,1367.0,True
+LANE-CNSZX-EGSOK-SEA,Shenzhen Yantian → Ain Sokhna (sea),sea,19,2480.0,704.5,False
+LANE-TRMER-EGPSD-SEA,Mersin → Port Said East (sea),sea,6,950.0,132.0,False
+LANE-TRMER-MAPTM-SEA,Mersin → Tanger Med (sea),sea,8,1190.0,222.0,False
+LANE-EGPSD-EGSOK-RD,Port Said East → Ain Sokhna (road),road,1,950.0,180.0,False
+LANE-TRMER-EGSOK-SEA,Mersin → Ain Sokhna (sea),sea,9,1340.0,275.8,False
+LANE-TRMER-EGPSD-ALT,"Mersin → Port Said East (sea, contingency)",sea,10,1400.0,132.0,True
+LANE-EGPSD-EGPSD-RD,Port Said East → Port Said East (road),road,1,950.0,180.0,False
+LANE-EGPSD-MAPTM-SEA,Port Said East → Tanger Med (sea),sea,8,1170.0,213.8,False
+LANE-KRPUS-MAPTM-SEA,Busan → Tanger Med (sea),sea,27,3360.0,1036.7,False
+LANE-KRPUS-MAPTM-ALT,"Busan → Tanger Med (sea, contingency)",sea,37,4990.0,1478.1,True
+LANE-KRPUS-EGPSD-SEA,Busan → Port Said East (sea),sea,25,3120.0,946.6,False
+LANE-KRPUS-EGPSD-ALT,"Busan → Port Said East (sea, contingency)",sea,44,5560.0,1690.8,True
+LANE-KRPUS-EGSOK-SEA,Busan → Ain Sokhna (sea),sea,22,2780.0,815.6,False
+LANE-EGALY-MAPTM-SEA,Alexandria → Tanger Med (sea),sea,8,1140.0,201.3,False
+LANE-EGALY-EGPSD-RD,Alexandria → Port Said East (road),road,1,950.0,180.0,False
+LANE-EGALY-EGSOK-RD,Alexandria → Ain Sokhna (road),road,1,950.0,180.0,False
+LANE-CNSHA-EGSOK-SEA,Shanghai → Ain Sokhna (sea),sea,21,2700.0,786.4,False
+LANE-CNSHA-EGPSD-ALT,"Shanghai → Port Said East (sea, contingency)",sea,43,5480.0,1661.6,True
+LANE-AEJEA-EGSOK-SEA,Jebel Ali → Ain Sokhna (sea),sea,12,1600.0,374.9,False
+LANE-AEJEA-EGPSD-ALT,"Jebel Ali → Port Said East (sea, contingency)",sea,37,4680.0,1362.4,True
+LANE-ITGOA-EGSOK-SEA,Genoa → Ain Sokhna (sea),sea,10,1400.0,299.8,False
+LANE-ITGOA-EGPSD-ALT,"Genoa → Port Said East (sea, contingency)",sea,9,1470.0,155.9,True
+LANE-DEHAM-MAPTM-SEA,Hamburg → Tanger Med (sea),sea,7,1120.0,193.3,False
+LANE-DEHAM-EGSOK-SEA,Hamburg → Ain Sokhna (sea),sea,16,2070.0,549.8,False
+LANE-DEHAM-EGPSD-ALT,"Hamburg → Port Said East (sea, contingency)",sea,14,2130.0,406.0,True
+LANE-PLGDN-MAPTM-SEA,Gdańsk → Tanger Med (sea),sea,8,1210.0,227.9,False
+LANE-MAPTM-MAPTM-RD,Tanger Med → Tanger Med (road),road,1,950.0,180.0,False
+LANE-MAPTM-EGPSD-SEA,Tanger Med → Port Said East (sea),sea,8,1170.0,213.8,False
+LANE-MAPTM-EGSOK-SEA,Tanger Med → Ain Sokhna (sea),sea,11,1550.0,357.6,False
+LANE-MAPTM-EGPSD-ALT,"Tanger Med → Port Said East (sea, contingency)",sea,10,1620.0,213.8,True
+LANE-CNSHA-EGPSD-SEA,Shanghai → Port Said East (sea),sea,24,3050.0,917.4,False
+LANE-INNSA-EGPSD-SEA,Nhava Sheva → Port Said East (sea),sea,14,1820.0,458.5,False
+LANE-INNSA-EGPSD-ALT,"Nhava Sheva → Port Said East (sea, contingency)",sea,33,4560.0,1315.0,True
+LANE-CNSHA-CNNGB-RD,Shanghai → Ningbo-Zhoushan (road),road,1,950.0,180.0,False
+LANE-CNSHA-VNSGN-SEA,Shanghai → Ho Chi Minh City (Cat Lai) (sea),sea,7,1100.0,187.2,False
+LANE-KRPUS-VNSGN-SEA,Busan → Ho Chi Minh City (Cat Lai) (sea),sea,8,1180.0,216.4,False
+LANE-MZMPM-VNSGN-SEA,Maputo → Ho Chi Minh City (Cat Lai) (sea),sea,23,2900.0,862.2,False
+LANE-JPYOK-CNNGB-SEA,Yokohama → Ningbo-Zhoushan (sea),sea,5,890.0,107.4,False
+LANE-JPYOK-VNSGN-SEA,Yokohama → Ho Chi Minh City (Cat Lai) (sea),sea,9,1310.0,267.1,False
+LANE-KRPUS-CNNGB-SEA,Busan → Ningbo-Zhoushan (sea),sea,4,750.0,56.7,False
+LANE-TWKHH-MYPKG-SEA,Kaohsiung → Port Klang (sea),sea,8,1140.0,204.3,False
+LANE-TWKHH-JPYOK-SEA,Kaohsiung → Yokohama (sea),sea,9,1340.0,276.7,False
+LANE-JPYOK-DEHAM-SEA,Yokohama → Hamburg (sea),sea,33,4010.0,1279.5,False
+LANE-JPYOK-DEHAM-ALT,"Yokohama → Hamburg (sea, contingency)",sea,42,5530.0,1681.7,True
+LANE-USHOU-TWKHH-SEA,Houston → Kaohsiung (sea),sea,39,4730.0,1549.0,False
+LANE-USHOU-TWKHH-ALT,"Houston → Kaohsiung (sea, contingency)",sea,40,5340.0,1607.7,True
+LANE-CNSHA-TWKHH-SEA,Shanghai → Kaohsiung (sea),sea,8,1120.0,196.8,False
+LANE-CNSZX-TWKHH-SEA,Shenzhen Yantian → Kaohsiung (sea),sea,6,910.0,114.9,False
+LANE-CNSZX-MYPKG-SEA,Shenzhen Yantian → Port Klang (sea),sea,7,1110.0,190.5,False
+LANE-AEJEA-EGALY-SEA,Jebel Ali → Alexandria (sea),sea,14,1920.0,493.3,False
+LANE-AEJEA-EGALY-ALT,"Jebel Ali → Alexandria (sea, contingency)",sea,34,4650.0,1349.9,True
+LANE-AEJEA-TRMER-SEA,Jebel Ali → Mersin (sea),sea,15,1970.0,514.1,False
+LANE-AEJEA-TRMER-ALT,"Jebel Ali → Mersin (sea, contingency)",sea,35,4710.0,1370.6,True
+LANE-AEJEA-CNNGB-SEA,Jebel Ali → Ningbo-Zhoushan (sea),sea,18,2330.0,648.4,False
+LANE-AEJEA-CNSHA-SEA,Jebel Ali → Shanghai (sea),sea,18,2340.0,651.0,False
+LANE-CLSAI-EGPSD-SEA,San Antonio → Port Said East (sea),sea,29,3560.0,1109.8,False
+LANE-CLSAI-CNSZX-SEA,San Antonio → Shenzhen Yantian (sea),sea,33,4020.0,1284.0,False
+LANE-CLSAI-AEJEA-SEA,San Antonio → Jebel Ali (sea),sea,38,4580.0,1491.9,False
+LANE-CLSAI-AEJEA-ALT,"San Antonio → Jebel Ali (sea, contingency)",sea,44,5720.0,1752.0,True
+LANE-CLSAI-TRMER-SEA,San Antonio → Mersin (sea),sea,29,3580.0,1118.1,False
+LANE-EGSOK-EGPSD-RD,Ain Sokhna → Port Said East (road),road,1,950.0,180.0,False
+LANE-EGSOK-SAJED-SEA,Ain Sokhna → Jeddah Islamic Port (sea),sea,5,800.0,73.5,False
+LANE-CNSHA-INNSA-SEA,Shanghai → Nhava Sheva (sea),sea,17,2210.0,603.7,False
+LANE-CNSHA-AEJEA-SEA,Shanghai → Jebel Ali (sea),sea,18,2340.0,651.0,False
+LANE-CLSAI-CNSHA-SEA,San Antonio → Shanghai (sea),sea,29,3620.0,1131.1,False
+LANE-CLSAI-KRPUS-SEA,San Antonio → Busan (sea),sea,30,3690.0,1160.3,False
+LANE-AUFRE-CNSHA-SEA,Fremantle → Shanghai (sea),sea,14,1850.0,469.3,False
+LANE-EGSOK-DEHAM-SEA,Ain Sokhna → Hamburg (sea),sea,16,2070.0,549.8,False
+LANE-EGPSD-DEHAM-SEA,Port Said East → Hamburg (sea),sea,12,1680.0,406.0,False
+LANE-MAPTM-DEHAM-SEA,Tanger Med → Hamburg (sea),sea,7,1120.0,193.3,False
+LANE-EGPSD-NLRTM-SEA,Port Said East → Rotterdam (sea),sea,12,1620.0,383.1,False
+LANE-EGSOK-NLRTM-SEA,Ain Sokhna → Rotterdam (sea),sea,15,2010.0,526.9,False
+LANE-MAPTM-NLRTM-SEA,Tanger Med → Rotterdam (sea),sea,7,1050.0,170.4,False
+LANE-EGPSD-ESVLC-SEA,Port Said East → Valencia (sea),sea,7,1090.0,184.9,False
+LANE-EGSOK-ESVLC-SEA,Ain Sokhna → Valencia (sea),sea,11,1480.0,328.8,False
+LANE-EGPSD-ITGOA-SEA,Port Said East → Genoa (sea),sea,7,1020.0,155.9,False
+LANE-EGSOK-ITGOA-SEA,Ain Sokhna → Genoa (sea),sea,10,1400.0,299.8,False
+LANE-EGSOK-BEANR-SEA,Ain Sokhna → Antwerp-Bruges (sea),sea,15,2020.0,531.1,False
+LANE-MAPTM-BEANR-SEA,Tanger Med → Antwerp-Bruges (sea),sea,7,1070.0,174.6,False
+LANE-EGSOK-PLGDN-SEA,Ain Sokhna → Gdańsk (sea),sea,17,2160.0,584.4,False
+LANE-EGPSD-PLGDN-SEA,Port Said East → Gdańsk (sea),sea,13,1770.0,440.6,False
+LANE-EGPSD-TRMER-SEA,Port Said East → Mersin (sea),sea,6,950.0,132.0,False
+LANE-EGSOK-SADMM-SEA,Ain Sokhna → King Abdulaziz Port Dammam (sea),sea,12,1590.0,370.3,False
+LANE-EGPSD-SADMM-SEA,Port Said East → King Abdulaziz Port Dammam (sea),sea,15,1940.0,501.3,False
+LANE-EGPSD-SADMM-ALT,"Port Said East → King Abdulaziz Port Dammam (sea, contingency)",sea,34,4670.0,1357.8,True
+LANE-MAPTM-SAJED-SEA,Tanger Med → Jeddah Islamic Port (sea),sea,10,1390.0,294.6,False
+LANE-EGPSD-SAJED-SEA,Port Said East → Jeddah Islamic Port (sea),sea,8,1150.0,204.5,False
+LANE-EGPSD-AEJEA-SEA,Port Said East → Jebel Ali (sea),sea,15,1950.0,505.8,False
+LANE-EGPSD-AEJEA-ALT,"Port Said East → Jebel Ali (sea, contingency)",sea,35,4680.0,1362.4,True
+LANE-EGSOK-AEJEA-SEA,Ain Sokhna → Jebel Ali (sea),sea,12,1600.0,374.9,False
+LANE-MAPTM-AEJEA-SEA,Tanger Med → Jebel Ali (sea),sea,17,2190.0,595.9,False
+LANE-MAPTM-AEJEA-ALT,"Tanger Med → Jebel Ali (sea, contingency)",sea,30,4120.0,1149.7,True
+LANE-EGSOK-EGALY-RD,Ain Sokhna → Alexandria (road),road,1,950.0,180.0,False
+LANE-EGPSD-EGALY-RD,Port Said East → Alexandria (road),road,1,950.0,180.0,False
+LANE-EGPSD-KEMBA-SEA,Port Said East → Mombasa (sea),sea,17,2190.0,595.4,False
+LANE-EGPSD-KEMBA-ALT,"Port Said East → Mombasa (sea, contingency)",sea,28,3900.0,1066.9,True
+LANE-EGSOK-KEMBA-SEA,Ain Sokhna → Mombasa (sea),sea,14,1840.0,464.4,False
+LANE-EGPSD-NGAPP-SEA,Port Said East → Lagos Apapa (sea),sea,16,2070.0,549.5,False
+LANE-EGSOK-NGAPP-SEA,Ain Sokhna → Lagos Apapa (sea),sea,19,2450.0,693.3,False
+LANE-EGSOK-ZADUR-SEA,Ain Sokhna → Durban (sea),sea,18,2320.0,643.7,False
+LANE-EGPSD-ZADUR-SEA,Port Said East → Durban (sea),sea,21,2670.0,774.7,False
+LANE-EGPSD-ZADUR-ALT,"Port Said East → Durban (sea, contingency)",sea,23,3400.0,881.3,True
+LANE-EGSOK-USHOU-SEA,Ain Sokhna → Houston (sea),sea,25,3180.0,967.2,False
+LANE-EGPSD-USHOU-SEA,Port Said East → Houston (sea),sea,22,2800.0,823.4,False
+LANE-MAPTM-USHOU-SEA,Tanger Med → Houston (sea),sea,17,2230.0,610.7,False
+LANE-EGSOK-INNSA-SEA,Ain Sokhna → Nhava Sheva (sea),sea,11,1470.0,327.5,False
+LANE-EGPSD-INNSA-SEA,Port Said East → Nhava Sheva (sea),sea,14,1820.0,458.5,False
+LANE-EGPSD-INNSA-ALT,"Port Said East → Nhava Sheva (sea, contingency)",sea,33,4560.0,1315.0,True

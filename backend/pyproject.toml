@@ -1,0 +1,42 @@
+[project]
+name = "atlas"
+version = "0.1.0"
+description = "Talk to your supply chain: a multilingual voice agent reasoning over an ontology-driven knowledge graph."
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = [
+    "pydantic>=2.14",
+    "pydantic-settings>=2.16",
+    "rdflib>=7.6",
+    "neo4j>=6.4",
+    "typer>=0.29",
+    "rich>=15.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=9.2", "ruff>=0.14"]
+
+[project.scripts]
+atlas = "atlas.cli:app"
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["atlas"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["B008"]  # typer.Option in defaults is idiomatic
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: needs a running Neo4j (docker compose up neo4j)"]
+
+[tool.ruff.lint.per-file-ignores]
+"atlas/seed/*.py" = ["E501"]  # tabular reference data reads better unwrapped
