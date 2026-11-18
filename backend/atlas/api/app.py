@@ -9,7 +9,7 @@ from contextlib import asynccontextmanager
 from typing import Any
 
 from a2a.server.routes import add_a2a_routes_to_fastapi
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, File, Form, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
@@ -17,11 +17,14 @@ from pydantic import BaseModel, Field
 from .. import __version__
 from ..config import get_settings
 from ..reasoning import Disruption, assess, assess_events, get_snapshot
+from ..seed.catalog import PORTS
+from ..seed.routing import route_coords
 from ..tools import TOOLS, strip_ui, summarise_impact
 from ..tools.mcp_server import build_server
 from .a2a_server import a2a_routes
 
 BASE_URL = "http://localhost:8000"
+RED_SEA = frozenset({"BAB_EL_MANDEB", "SUEZ"})
 mcp_app = build_server().streamable_http_app(streamable_http_path="/")
 
 
@@ -124,12 +127,18 @@ def overview() -> dict[str, Any]:
     for lane in s.of("ShippingLane"):
         o, d = s.one(lane, "ORIGIN"), s.one(lane, "DESTINATION")
         p = s.props[lane]
+        path = (
+            route_coords(o, d, RED_SEA if p.get("is_contingency") else frozenset())
+            if p["mode"] == "sea" and o in PORTS and d in PORTS
+            else [(s.props[o]["lon"], s.props[o]["lat"]), (s.props[d]["lon"], s.props[d]["lat"])]
+        )
         lanes.append(
             {
                 "id": lane,
                 "name": p["name"],
                 "mode": p["mode"],
                 "contingency": p.get("is_contingency", False),
+                "path": path,
                 "transit_days": p["transit_days"],
                 "from": o,
                 "to": d,
@@ -267,3 +276,25 @@ def scenario(req: ScenarioRequest) -> dict[str, Any]:
     else:
         raise HTTPException(422, "Provide event_ids or disruptions")
     return summarise_impact(report)
+
+
+# ===================================================================== voice
+@app.post("/api/transcribe")
+async def transcribe(file: UploadFile = File(...), language: str | None = Form(None)) -> dict[str, Any]:
+    """Speech-to-text with Whisper on Groq (fallback for browsers without built-in speech recognition)."""
+    s = get_settings()
+    if not (s.groq_api_key and s.groq_api_key.get_secret_value()):
+        raise HTTPException(503, "GROQ_API_KEY is not configured")
+    from groq import AsyncGroq
+
+    audio = await file.read()
+    if len(audio) > 20 * 1024 * 1024:
+        raise HTTPException(413, "Audio too large")
+    client = AsyncGroq(api_key=s.groq_api_key.get_secret_value())
+    result = await client.audio.transcriptions.create(
+        file=(file.filename or "speech.webm", audio),
+        model=s.stt_model,
+        language=language or None,
+        response_format="verbose_json",
+    )
+    return {"text": result.text, "language": getattr(result, "language", language)}

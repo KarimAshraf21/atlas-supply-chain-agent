@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink-950: #05080f;
+  --color-ink-900: #0a1020;
+  --color-ink-850: #0e1529;
+  --color-ink-800: #131b33;
+  --color-ink-700: #1c2645;
+  --color-ink-600: #2a3760;
+  --color-ink-500: #45527c;
+  --color-ink-400: #6f7ba3;
+  --color-ink-300: #9aa4c7;
+  --color-ink-200: #c6cde6;
+  --color-ink-100: #e6e9f5;
+
+  --color-tide-500: #2dd4bf;
+  --color-tide-400: #5eead4;
+  --color-tide-300: #99f6e4;
+  --color-signal-500: #f59e0b;
+  --color-signal-400: #fbbf24;
+  --color-alarm-500: #f43f5e;
+  --color-alarm-400: #fb7185;
+  --color-violet-400: #a78bfa;
+  --color-sky-400: #38bdf8;
+
+  --font-sans: var(--font-geist-sans), var(--font-arabic), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-arabic: var(--font-arabic), var(--font-geist-sans), sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(45, 212, 191, 0.08), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(167, 139, 250, 0.07), transparent 60%),
+    var(--color-ink-950);
+  color: var(--color-ink-100);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* glass panel */
+.panel {
+  background: linear-gradient(180deg, rgba(19, 27, 51, 0.72), rgba(10, 16, 32, 0.78));
+  border: 1px solid rgba(154, 164, 199, 0.12);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.04) inset,
+    0 20px 50px -20px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
+}
+
+.hairline {
+  border-color: rgba(154, 164, 199, 0.1);
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.01em;
+}
+
+[dir="rtl"] {
+  font-family: var(--font-arabic);
+}
+
+/* thin scrollbars */
+.scroll-thin {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(111, 123, 163, 0.35) transparent;
+}
+
+/* markdown answers */
+.prose-atlas {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-ink-200);
+}
+.prose-atlas strong {
+  color: var(--color-ink-100);
+  font-weight: 600;
+}
+.prose-atlas p {
+  margin: 0.4rem 0;
+}
+.prose-atlas ul,
+.prose-atlas ol {
+  margin: 0.35rem 0;
+  padding-inline-start: 1.15rem;
+}
+.prose-atlas ul {
+  list-style: disc;
+}
+.prose-atlas ol {
+  list-style: decimal;
+}
+.prose-atlas li {
+  margin: 0.15rem 0;
+}
+.prose-atlas li::marker {
+  color: var(--color-tide-500);
+}
+.prose-atlas h1,
+.prose-atlas h2,
+.prose-atlas h3 {
+  color: var(--color-ink-100);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0.8rem 0 0.3rem;
+}
+.prose-atlas code {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  background: rgba(45, 212, 191, 0.08);
+  color: var(--color-tide-300);
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.3rem;
+}
+.prose-atlas table {
+  width: 100%;
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+  border-collapse: collapse;
+}
+.prose-atlas th,
+.prose-atlas td {
+  border-bottom: 1px solid rgba(154, 164, 199, 0.12);
+  padding: 0.3rem 0.4rem;
+  text-align: start;
+}
+
+/* maplibre chrome */
+.maplibregl-ctrl-attrib {
+  background: rgba(5, 8, 15, 0.6) !important;
+  color: var(--color-ink-400) !important;
+  font-size: 10px !important;
+}
+.maplibregl-ctrl-attrib a {
+  color: var(--color-ink-300) !important;
+}
+.maplibregl-popup-content {
+  background: rgba(14, 21, 41, 0.95) !important;
+  color: var(--color-ink-100) !important;
+  border: 1px solid rgba(154, 164, 199, 0.15);
+  border-radius: 10px !important;
+  padding: 8px 10px !important;
+  font-size: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+.maplibregl-popup-tip {
+  border-top-color: rgba(14, 21, 41, 0.95) !important;
+  border-bottom-color: rgba(14, 21, 41, 0.95) !important;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(94, 234, 212, 0.18), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

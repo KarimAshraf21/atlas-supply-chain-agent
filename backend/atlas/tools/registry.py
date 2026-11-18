@@ -35,6 +35,12 @@ def _money(x: float) -> str:
 
 
 def summarise_impact(r: ImpactReport, top: int = 6) -> dict[str, Any]:
+    out = _summarise_impact(r, top)
+    out["ui"]["summary"] = strip_ui(out)
+    return out
+
+
+def _summarise_impact(r: ImpactReport, top: int = 6) -> dict[str, Any]:
     snap = get_snapshot()
     names = snap.name
     t = r.totals

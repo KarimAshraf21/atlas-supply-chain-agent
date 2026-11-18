@@ -19,8 +19,8 @@ contracts, then answers with numbers, a reasoning path you can see, and the sour
 | Reasoning layer (impact propagation, SPOF & hidden-dependency detection, inference rules, what-if) | ✅ |
 | Tool layer (10 typed tools) exposed to agents, **MCP** (stdio + HTTP) and REST | ✅ |
 | Agent harness (LangGraph router → parallel specialists → streaming composer) + **A2A** server | ✅ |
-| Multilingual voice (streaming STT/TTS) | 🚧 next |
-| Web app (voice orb, graph explorer, world map, scenario simulator) | 🚧 |
+| Web app: copilot with voice (EN/AR), world map, scenario lab, risk radar, graph explorer | ✅ |
+| One-command Docker stack (Neo4j + API + web) | ✅ |
 
 ## The demo company
 
@@ -54,7 +54,15 @@ Web app ─▶ API gateway ─▶ Voice pipeline ─▶ Agent harness (LangGraph
 
 ## Quick start
 
-Requires Docker and Python 3.12+.
+**Everything in Docker:**
+
+```bash
+cp .env.example .env          # add GROQ_API_KEY for chat/voice (map, scenarios and risk radar work without it)
+docker compose --profile app up --build
+# web: http://localhost:3000 · API: http://localhost:8000/docs · Neo4j: http://localhost:7474
+```
+
+**Local development** (Docker for Neo4j, Python 3.12+, Node 22+):
 
 ```bash
 cp .env.example .env
@@ -65,6 +73,8 @@ cd backend && python -m venv .venv && .venv/bin/pip install -e ".[dev]"
 .venv/bin/atlas reason     # materialise inferred relationships
 .venv/bin/atlas ontology   # export OWL/Turtle, JSON and the LLM prompt schema
 .venv/bin/pytest
+.venv/bin/atlas serve      # API on :8000
+cd ../web && npm install && npm run dev   # web app on :3000
 ```
 
 Open the Neo4j browser at http://localhost:7474 and try:

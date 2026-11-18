@@ -82,3 +82,10 @@ def sea_days(km: float) -> int:
 
 def road_days(origin: tuple[float, float], dest: tuple[float, float]) -> int:
     return max(1, round(haversine_km(origin, dest) * 1.3 / 550))
+
+
+def route_coords(origin_port: str, dest_port: str, avoid: frozenset[str] = frozenset()) -> list[tuple[float, float]]:
+    """Waypoints as (lon, lat) for drawing a sea lane on a map; straight line if no sea route exists."""
+    route = sea_route(origin_port, dest_port, avoid)
+    nodes = [origin_port, *(route[0] if route else []), dest_port]
+    return [(_coord(n)[1], _coord(n)[0]) for n in nodes]
